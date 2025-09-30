@@ -24,3 +24,16 @@ while read -r file_url; do
 done
 
 echo "✅ All files from $FOLDER_PATH in branch $BRANCH downloaded to $TARGET_DIR"
+
+FOLDER_PATH="csv/acxon_based/know_rox/narratives/ssd_case_inspection"
+# Get all files from the folder in the branch
+curl -s "https://api.github.com/repos/$USER/$REPO/contents/$FOLDER_PATH?ref=$BRANCH" |
+grep '"download_url"' |
+cut -d '"' -f 4 |
+while read -r file_url; do
+    file_name=$(basename "$file_url")
+    echo "Downloading $file_name..."
+    curl -s -L "$file_url" -o "$TARGET_DIR/$file_name"
+done
+
+echo "✅ All files from $FOLDER_PATH in branch $BRANCH downloaded to $TARGET_DIR"
