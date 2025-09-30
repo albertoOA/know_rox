@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
     model_to_run = 'qwen3:8b' # qwen3:14b  |  qwen3:8b  |  qwen3:1.7b  |  gpt-oss:20b  
     specificity = 1
-    dataset_name = 'unknown'
+    dataset_name = 'collaborative_ssd_case_inspection'
 
     narratives_csv_file = "generated_c_narratives_multiple_plans_comparison_with_specificity_" \
         + str(specificity) + "_dataset_" + dataset_name + ".csv"
@@ -64,7 +64,9 @@ if __name__ == "__main__":
     #explanation_generation_agent = Agent(ollama_model, output_type=str, system_prompt=system_prompt) # it returns the complete text (as using the chat) good for debugging 
     #explanation_generation_agent = Agent(ollama_model, output_type=Union[OntologyBasedExplanationOutput, str], system_prompt=system_prompt) # it returns the text (Union uses smart mode by default)
 
-    for i in range (0, 5):    
+    #number_of_explanations = 5
+    number_of_explanations = len(narratives_dict["Explanation"])
+    for i in range (0, number_of_explanations):    
         user_prompt = narratives_dict["Explanation"][i]
         complete_user_prompt = user_prompt 
 
@@ -85,7 +87,8 @@ if __name__ == "__main__":
         results_dict['Specificity'].append(specificity)
         results_dict['Words'].append(len(result.output.narrative.split()))
         ##results_dict['Readability score'].append(textstat.dale_chall_readability_score(result.output.narrative))
-        results_dict['Readability score'].append(textstat.text_standard(result.output.narrative, float_output=True))
+        ##results_dict['Readability score'].append(textstat.text_standard(result.output.narrative, float_output=True))
+        results_dict['Readability score'].append(textstat.flesch_reading_ease(result.output.narrative))
         results_dict['Cosine similarity'].append(test_utils_object.compute_text_cosine_similarity(\
             [narratives_dict["Explanation"][i], result.output.narrative])) # item() turns the np.float into python float
 
