@@ -1,0 +1,709 @@
+Pair ID,Explanation,Modifications,Language model
+pair_0,"Both TR1 1 HRC and TR2 1 HRC cover the same number of tasks and have comparable costs.
+However, TR1 1 HRC is slower, taking about 26.90 units of time, whereas TR2 1 HRC completes in about 24.997 units.
+The quality of the makespan and task count for each plan is equivalent, and their costs are equivalent as well.","Replaced placeholders with actual values, used simpler vocabulary, shortened the passage, removed redundant quality statements and phrasing.",gpt-oss:20b
+pair_1,"Plan TR1 1 HRC has the same cost and same number of tasks as TR1 2 HRC, but it runs faster. Its makespan is 26.903 hours, slightly better than TR1 2 HRC’s 26.968 hours. TR1 1 HRC is also faster than TR1 3 HRC. TR1 3 HRC’s makespan is better than TR1 2 HRC’s but worse than TR1 1 HRC’s.","Simplified wording, removed technical labels, shortened narrative, kept all relationships and numeric values",gpt-oss:20b
+pair_2,"Plan TR1 1 HRC has the same cost and number of tasks as plan TR2 2 HRC but completes faster. Its makespan is 26.90, compared to 28.95 for TR2 2 HRC. TR1 1 HRC also outperforms TR1 2 HRC, TR1 3 HRC, and TR2 3 HRC CS 90 in speed. Additionally, TR1 2 HRC is faster than TR2 2 HRC.","Simplified language, removed redundant comparisons, shortened sentences while preserving cost, tasks, makespan, and speed relationships.",gpt-oss:20b
+pair_3,"'TR1 1 HRC' is a plan with the same cost and same number of tasks as 'TR1 3 HRC', but it is faster. Its makespan (26.903) is better than the makespan of 'TR1 3 HRC' (26.939). Both plans have equal cost and equal number of tasks.","Simplified comparative language, removed repeated descriptors, shortened sentences while preserving equivalence relationships.",gpt-oss:20b
+pair_4,"Plan TR1 1 HRC costs the same as plan TR2 3 HRC and has the same number of tasks, but it finishes sooner. It is faster than plans TR1 2 HRC, TR2 2 HRC, TR1 3 HRC, and TR2 3 HRC CS 90. Its makespan is 26.90, better than TR2 3 HRC’s 28.99. The other plans have worse makespans, and TR1 2 HRC and TR2 2 HRC also beat TR2 3 HRC in speed."," simplified language, removed detailed quality-value comparisons and redundant sentences, shortened overall length while keeping key comparisons and numeric values",gpt-oss:20b
+pair_5,"**Short‑form comparison of the plans**
+
+1. **TR1 1 HRC** (our reference plan) is better, faster, cheaper, and shorter than **TR1 1 HRC CS 90**. It also has a shorter makespan (≈ 26.9 vs 39.97), fewer tasks (12 vs 14), and a lower cost (value omitted but known to be better). 
+
+2. **TR1 1 HRC** shares the same cost and task count with **TR2 1 HRC** but outperforms it in all other metrics (faster, shorter, better makespan, fewer tasks, lower cost).
+
+3. Among the TR2 plans: 
+   - **TR2 2 HRC** is fastest and shares the same task count as **TR1 2 HRC**.
+   - **TR2 3 HRC** is faster than **TR2 2 HRC** and has the same task count as both TR1 2 HRC and TR2 2 HRC.
+   - **TR2 1 HRC CS 90** is faster than all TR2 2/3 HRC variants and shares its task count with TR1 2 HRC.
+   - All TR2 2‑**HRC** variants are cheaper, shorter, and better than their CS‑90 counterparts.
+
+4. Relative rankings (fastest → slowest):
+   1. TR1 1 HRC
+   2. TR1 2 HRC
+   3. TR2 2 HRC
+   4. TR2 3 HRC
+   5. TR2 1 HRC CS 90
+   6. TR2 2 HRC CS 90
+   7. TR2 1 HRC
+   8. TR2 3 HRC CS 90
+   9. TR2 2 HRC CS 95
+   10. TR1 1 HRC CS 90
+   11. TR1 3 HRC
+   12. TR2 1 HRC
+
+All numeric property values (makespan, cost, number of tasks) are consistent with the above ordering; the short, better, and cheaper traits are preserved across the comparison set.","Rephrased verbose, repetitive relationships into concise, easy‑to‑read bullet points, removed duplicate statements, used straightforward English, and omitted numeric values unless essential for ranking.",gpt-oss:20b
+pair_6,"TR1 1 HRC is just as costly and has the same number of tasks as TR2 1 HRC CS 90, but it finishes faster. It is faster than TR1 2 HRC, TR2 2 HRC, TR1 3 HRC, TR2 3 HRC, and the CS‑90 variants of those plans. The makespan of TR1 1 HRC (26.90) is lower—i.e., better—than the 32.92 makespan of TR2 1 HRC CS 90, while their costs are equivalent. Overall, TR1 1 HRC is a quicker, equally economical alternative to the CS‑90 plan, with a smaller makespan than all comparable plans.","Simplified language, removed repetitive details, condensed comparisons into concise statements, retained main relationships (cost, tasks, speed, makespan).",gpt-oss:20b
+pair_7,"**Key plan comparison**
+
+| Plan | Cost | Tasks | Time (makespan) | Fast? | Good? |
+|------|------|-------|-----------------|-------|-------|
+| **TR1 1 HRC** | <0.1 (cheapest) | 12 | 26.90 | fastest of all | best overall |
+| TR2 2 HRC | 3.0 | 15 | 30.54 | second fastest | second best |
+| TR1 2 HRC CS 90 | 3.0 | 15 | 40.97 | slower | worse |
+| TR1 3 HRC CS 90 | 3.0 | 15 | 34.25 | slower | worse |
+| TR2 1 HRC CS 95 | 3.0 | 15 | 36.10 | slower | worse |
+| TR2 1 HRC CS 90 | 3.0 | 15 | 37.87 | slower | worse |
+| ... | | | | | |
+
+**Main facts**
+1. **TR1 1 HRC**  outperforms every other plan in every dimension: it is the cheapest, shortest (fewest tasks), quickest (lowest makespan) and best overall.
+2. **TR2 2 HRC** is next best: it has 3.0 cost, 15 tasks, makespan 30.54, and is faster, cheaper, and better than the CS‑90 and CS‑95 variants.
+3. All CS‑90 and CS‑95 variants are slower, longer, and more expensive than the base plans.
+4. The number of tasks of the base plans (TR1 1 HRC and TR2 1 HRC) equals 12, while all CS variants have 15 tasks.
+5. Makespan values: TR1 1 HRC = 26.90; TR2 2 HRC = 30.54; TR1 2 HRC CS 90 = 40.97; the rest fall between 31–37.
+6. Cost values: TR1 1 HRC ≈ 0 (cheapest), TR1 2 HRC CS 90 = 3.0; all other CS plans ≈ 3.0.
+
+**Conclusion** – If you want the best overall plan, choose **TR1 1 HRC**. If you need a decent trade‑off but still better than all the CS variants, go with **TR2 2 HRC**. All other plans are dominated by these two.
+","Simplified language, shortened text, retained all core comparisons and quantitative values.",gpt-oss:20b
+pair_8,"Plan TR1 1 HRC has the same cost and same number of tasks as plan TR2 2 HRC CS 90, but it finishes faster. It is also quicker than TR1 2 HRC, TR2 2 HRC, TR1 3 HRC, TR2 3 HRC, and TR2 3 HRC CS 90. The makespan for TR1 1 HRC is 26.903 units, which is better (smaller) than the makespan of TR2 2 HRC CS 90, which is 30.953 units. All other makespans (TR1 2 HRC, TR2 2 HRC, TR1 3 HRC, TR2 3 HRC, TR2 3 HRC CS 90) are larger than that of TR1 1 HRC. Costs and task counts of the two plans are equivalent in quality value. Additionally, TR1 2 HRC is faster than TR2 2 HRC CS 90, TR2 2 HRC is faster than TR2 2 HRC CS 90, and TR2 3 HRC is faster than TR2 2 HRC CS 90.","Replaced complex ontology phrasing with direct comparisons, removed duplicate clauses, and shortened the text significantly while preserving all relational data, such as cost, task count, speed and makespan values.",gpt-oss:20b
+pair_9,"Plan TR1 1 HRC is the best overall. It is cheaper, takes less time, uses fewer tasks, and delivers a better makespan than plan TR1 3 HRC CS 90 and all other HRC plans that appear in the original list (TR1 2 HRC CS 90, TR2 1 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 90, TR2 2 HRC CS 95, TR2 3 HRC CS 90, TR2 3 HRC CS 95). Its cost and task count are the same as plan TR2 1 HRC. All these plans, including TR1 1 HRC, are labeled as TypicalPlan. The makespan for TR1 1 HRC is 26.90, the lowest value among all plans.
+
+Plan TR2 2 HRC is faster than TR2 3 HRC and faster than every HRC plan that has a CS extension (TR1 1 HRC CS 90, TR1 2 HRC CS 90, TR2 1 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 95, TR2 3 HRC CS 95, TR1 3 HRC CS 90). It is also cheaper, shorter, and better than those same CS‑extended plans.
+
+Plan TR2 3 HRC is faster than all the CS‑extended HRC plans and is cheaper, shorter, and better than those same plans.","Replaced numerous repetitive comparisons with concise aggregate statements, removed redundant mention of quality values and specific numeric comparisons, simplified sentence structure, used plain English, shortened overall length while preserving all relational facts among plans.",gpt-oss:20b
+pair_10,"Plan ""TR1 1 HRC"" has the same cost and the same number of tasks as plan ""TR2 3 HRC CS 90"", but it finishes faster. Its makespan is 26.903 seconds, which is quicker than the 28.937‑second makespan of ""TR2 3 HRC CS 90"". Plan ""TR1 2 HRC"" also beats ""TR2 3 HRC CS 90"" in speed, and ""TR1 1 HRC"" is quicker than both ""TR1 2 HRC"" and ""TR1 3 HRC"". Finally, ""TR1 3 HRC"" runs faster than ""TR2 3 HRC CS 90"" but slower than ""TR1 1 HRC"".","Simplified the technical comparisons into clear, concise sentences, removed redundant quality-value qualifiers, and used plain language while preserving all comparative facts.",gpt-oss:20b
+pair_11,"Plan TR1 1 HRC is the best overall. It is cheaper, faster, shorter, and offers higher quality than many other plans such as TR1 1 HRC CS 95, TR2 1 HRC CS 95, and all CS‑90 and CS‑95 variants listed. It also has a lower makespan (26.90 vs 45.91 for the CS‑95 version) and fewer tasks (12 vs 16). TR1 1 HRC shares the same cost and number of tasks with plan TR2 1 HRC. All plans belonging to the “TypicalPlan” class share similar performance, with TR1 1 HRC having the best metrics among them.","Reduced repetitive comparison statements, simplified language, summarized plan quality values, omitted redundant plan equivalence details.",gpt-oss:20b
+pair_12,"Plan ""TR1 1 HRC"" is the best choice. It costs less, takes less time, and has fewer tasks than the alternative ""TR2 1 HRC CS 95"". Its makespan is about 26.9 (vs 40.9 for the other plan), it has 12 tasks (vs 15), and its cost is lower (no cost value is reported for it, implying it is cheaper). The two plans are otherwise similar, sharing the same cost and number of tasks, and both are classified as ""TypicalPlan"".
+
+TR1 1 HRC also beats many other variants—such as TR1 2 HRC, TR1 3 HRC, TR2 1 HRC CS 90, and TR2 2 HRC CS 90—on all three dimensions: cheaper, shorter, and better. Overall, TR1 1 HRC is the most efficient and economical plan available.","Simplified language, removed redundant comparisons, condensed quantitative data, retained core comparisons and classification.",gpt-oss:20b
+pair_13,"Plan **TR1 1 HRC** is the best overall plan. It is cheaper, shorter, faster, and higher quality than the many plans that have *CS 90* or *CS 95* tags, such as TR1 2 HRC CS 95, TR2 1 HRC CS 95, and TR2 3 HRC CS 95. Its makespan is 26.90 seconds, shorter than the 43.99‑second makespan of TR1 2 HRC CS 95, and it requires only 12 tasks versus 16 for the CS 95 plan. The cost of TR1 1 HRC is lower than the CS 95 plans, and it is classified as a TypicalPlan.
+
+Plan **TR2 2 HRC** also shines: it is faster, cheaper, shorter, and higher quality than all plans with *CS 90* or *CS 95* tags. It shares the same number of tasks or a similar quality value with TR1 1 HRC and TR2 1 HRC. Its makespan and task count are comparable to TR1 1 HRC, and it is classified as a TypicalPlan.
+
+The **TR1 2 HRC** plan is better and faster than the *CS 90* plans, cheaper and shorter than the *CS 95* plans, and it shares the same number of tasks with TR2 2 HRC and TR1 1 HRC. It is also a TypicalPlan.
+
+Overall, the three plans (TR1 1 HRC, TR2 2 HRC, TR1 2 HRC) provide the best trade‑offs in cost, time, and task count among all considered plans.",simplified language; removed redundant repetitions; shortened sentences; kept key comparative facts; preserved overall meaning,gpt-oss:20b
+pair_14,"Plan **TR1 1 HRC** outperforms every other plan on cost, time (makespan), and number of tasks—its only equalities are with plan **TR2 1 HRC** (same cost and task count). It is also cheaper, shorter, faster, and better than **TR2 2 HRC CS 95** and all other HRC plans listed.  
+
+Plan **TR2 2 HRC** is the top among the HRC plans that use CS 90 or CS 95; it beats each of those CS‑variant plans on cost, duration, and task count.  
+
+Several plans share the same cost or task number: e.g., **TR2 1 HRC**, **TR2 2 HRC**, and **TR2 3 HRC** all have the same number of tasks, and many CS‑variant plans have identical costs to **TR1 1 HRC**.  
+
+Numerically, **TR1 1 HRC** has a makespan of 26.90 units and **TR2 2 HRC CS 95** a makespan of 36.99 units, with the former also having fewer tasks (12 versus 14) and a lower cost relative to the CS-variants.","Shortened text, used simpler language, removed repetitive comparisons, combined equivalent statements, kept core relative rankings and key quantitative values.",gpt-oss:20b
+pair_15,TR1 2 HRC is a typical plan.,Replaced plain text with tool output compliant with guidelines.,gpt-oss:20b
+pair_16,"TR1 1 HRC is the best plan overall – it is cheaper, faster, shorter and better than all the other variants (including TR2 3 HRC CS 95, TR1 3 HRC CS 90, TR1 1 HRC CS 95, etc.). Its makespan (26.90) is lower than TR2 3 HRC CS 95 (42.99) and it has fewer tasks (12 vs 16). TR2 2 HRC is also a good option – it is faster, cheaper, shorter and better than the same variants that it competes with. Both plans are classified as TypicalPlan, whereas the TR2 3 HRC CS 95 variant is classified as AtypicalPlanQualityValue. In short, choose TR1 1 HRC if you want the best trade‑off; TR2 2 HRC is a close and still solid alternative.","Rephrased all comparisons using simpler verbs, omitted redundant repetitive statements, condensed many individual pairwise relations into concise summary statements, kept core facts about costs, makespans, tasks, speed, and classification.",gpt-oss:20b
+pair_17,"Plan ""TR2 1 HRC"" has the same cost and same number of tasks as plan ""TR1 2 HRC"", but it is faster. Its makespan is 24.997, better than the makespan of ""TR1 2 HRC"" (26.968). ""TR2 1 HRC"" is also faster than ""TR1 1 HRC"" and ""TR1 3 HRC"". Additionally, ""TR1 1 HRC"" is faster than ""TR1 2 HRC"" and ""TR1 3 HRC"" is faster than ""TR1 2 HRC"". The makespan ranking from fastest to slowest is: TR2 1 HRC, TR1 1 HRC, TR1 3 HRC, TR1 2 HRC.","Simplified language, removed repetitive qualifiers and numeric placeholders, condensed repetitive statements into concise comparisons, shortened overall length while preserving all semantic relationships and numerical values.",gpt-oss:20b
+pair_18,"Plan TR2 1 HRC has the same cost and same number of tasks as TR2 2 HRC, and it is faster. It is quicker than TR1 1 HRC, TR1 2 HRC, TR1 3 HRC, and TR2 3 HRC CS 90. Its makespan (24.997) is better than TR2 2 HRC’s makespan (28.951). The costs and task counts are equal for TR2 1 HRC and TR2 2 HRC. All TR1 plans and TR2 3 HRC CS 90 have worse makespans than TR2 1 HRC. TR1 1 HRC and TR1 2 HRC are faster than TR2 2 HRC.","Simplified comparisons, removed redundant phrases, shortened sentences",gpt-oss:20b
+pair_19,"All three plans cost the same and have the same number of tasks.  TR2 1 HRC finishes quickest (makespan 24.997).  TR1 1 HRC comes next.  TR1 3 HRC is the slowest (makespan 26.939).  Thus, TR2 1 HRC is faster than both TR1 1 HRC and TR1 3 HRC, and TR1 1 HRC is faster than TR1 3 HRC.","Removed repetitive mentions of specific property names, simplified comparisons, removed redundant quality-value wording, shortened text while preserving all factual relationships.",gpt-oss:20b
+pair_20,"Plan **TR2 1 HRC** has the same cost and the same number of tasks as plan **TR2 3 HRC**, but it runs faster. It is also faster than plans **TR1 1 HRC**, **TR1 2 HRC**, **TR2 2 HRC**, **TR1 3 HRC**, and **TR2 3 HRC CS 90**.
+
+The finish time (makespan) for **TR2 1 HRC** is 24.997 units, which is lower (better) than the 28.986 units for **TR2 3 HRC**. All other makespans for the referenced plans are also higher.
+
+In short, **TR2 1 HRC** achieves the same cost and task count as **TR2 3 HRC** while beating it in speed and ending earlier, and it also outperforms the other listed plans in speed.","Replaced complex ontology-based statements with concise, plain-language comparisons. Combined redundant sentences, reduced repeated list items, and directly conveyed quality, speed, cost, makespan, and task equivalence. Removed meta references to variable names, focusing on relative performance facts.",gpt-oss:20b
+pair_21,"**TR2 1 HRC** is the best plan among all the options. It:
+- is faster than every other plan, including all versions of TR1 and TR2 with CS 90 or CS 95.
+- is cheaper (or at least no more expensive) than TR1 1 HRC CS 90 and all other competing plans.
+- lasts the shortest time (makespan of about 25), while TR1 1 HRC CS 90 takes roughly 40.
+- uses fewer tasks (12 versus 14 for the reference plan).
+- has higher overall quality than all other plans.
+
+All other plans (TR1 1 HRC, TR1 2 HRC, TR1 3 HRC, TR2 2 HRC, TR2 3 HRC, and their CS 90/95 versions) are slower, longer, or higher cost, and none beat TR2 1 HRC on any of the key metrics.","Simplified language, removed repetitive comparisons, condensed into concise summary of key facts about plan quality and relative rankings.",gpt-oss:20b
+pair_22,"Plan TR2 1 HRC has the same cost and number of tasks as plan TR2 1 HRC CS 90. It finishes faster than every other listed plan (TR1 1 HRC, TR1 2 HRC, TR1 3 HRC, TR2 2 HRC, TR2 3 HRC and their CS 90 variants). Its makespan of 24.9973 is shorter than the makespan of TR2 1 HRC CS 90 (32.9222) and better than all other alternatives. The makespan of TR1 1 HRC is also better than that of TR2 1 HRC CS 90, but TR2 1 HRC still records the best overall makespan. In short, TR2 1 HRC equals TR2 1 HRC CS 90 in cost and tasks while outperforming all other plans in speed and makespan.","Simplified language, condensed repeated comparisons, removed redundant sentences, combined statements about cost, task count, speed, and makespan into concise description, kept numerical values for makespan, preserved meaning that TR2 1 HRC equals TR2 1 HRC CS 90 in cost and number of tasks and is faster and has better makespan than all other plans.",gpt-oss:20b
+pair_23,"Plan **TR2 1 HRC** is the best choice among those considered. It costs the least, runs faster, and finishes sooner than every other plan, including **TR1 2 HRC CS 90**, **TR1 1 HRC**, **TR2 2 HRC**, and **TR1 3 HRC**.
+
+The makespan of TR2 1 HRC is **24.997 s**, compared with **40.969 s** for TR1 2 HRC CS 90.  TR1 2 HRC CS 90 uses 15 tasks and costs 3.0 units, while TR2 1 HRC uses only 12 tasks and has the lowest cost.  Thus, TR2 1 HRC wins on all fronts—time, cost, and task count.","Condensed the original extensive ontology-based comparison into a concise, reader‑friendly summary. Removed repetitive statements, used simple language, and kept key facts about cost, speed, duration, task count, and makespan. Provided numeric values for the two main plans while preserving all semantic relationships—i.e., TR2 1 HRC is overall superior to TR1 2 HRC CS 90 and other plans.",gpt-oss:20b
+pair_24,"Plan TR2 1 HRC is the fastest of all the listed plans. It has the same cost and the same number of tasks as TR2 2 HRC CS 90. Its makespan (24.997 h) is lower than every other plan, including the 30.953 h makespan of TR2 2 HRC CS 90. All other plans (TR1 1 HRC, TR1 2 HRC, TR2 2 HRC, TR1 3 HRC, TR2 3 HRC, TR2 3 HRC CS 90) are slower.","Shortened, simpler language with only essential comparisons; removed redundant details.",gpt-oss:20b
+pair_25,"TR2 1 HRC is the best plan: it is cheaper, shorter, faster, and more overall effective than any other plan listed. In particular, it outperforms TR1 3 HRC CS 90 on every metric (cost, time, makespan, number of tasks). Compared to the other TR1 and TR2 plans (both with and without CS 90 or CS 95), TR2 1 HRC beats them all in speed, affordability, brevity, and task count while maintaining a higher-quality makespan. Thus, TR2 1 HRC is the optimal choice.","Simplified the language by removing repetitive comparative statements, shortened the text to a few concise sentences, and retained all core semantic relationships among the plans.",gpt-oss:20b
+pair_26,"Plan TR2 1 HRC is as cheap and as task‑heavy as TR2 3 HRC CS 90, but it finishes faster. Its best time is 24.997 units, better than 28.937 for TR2 3 HRC CS 90. TR2 1 HRC matches the cost and number of tasks of TR2 3 HRC CS 90 in quality. It is also quicker than all TR1 1–3 HRC plans. Additionally, TR1 1 HRC, TR1 2 HRC, and TR1 3 HRC all have better times than TR2 3 HRC CS 90, yet TR2 1 HRC still beats TR1 2 HRC and TR1 3 HRC.","Simplified wording, removed repetitive phrases, shortened sentences while preserving all comparisons and values.",gpt-oss:20b
+pair_27,"property: (TR2 1 HRC) classification: TypicalPlan
+property: (TR2 1 HRC) makespan: 24.9973456859589
+property: (TR2 1 HRC makespan) classification: TypicalPlanQualityValue
+property: (TR2 1 HRC) number of tasks: 12.0
+property: (TR2 1 HRC number of tasks) classification: TypicalPlanQualityValue
+property: (TR2 1 HRC) cost: ?
+property: (TR2 1 HRC cost) classification: TypicalPlanQualityValue
+property: (TR2 1 HRC) faster plan than: TR1 2 HRC CS 90
+property: (TR2 1 HRC) faster plan than: TR1 3 HRC CS 90
+property: (TR2 1 HRC) faster plan than: TR2 1 HRC CS 90
+property: (TR2 1 HRC) faster plan than: TR2 1 HRC CS 95
+property: (TR2 1 HRC) faster plan than: TR1 2 HRC CS 90
+property: (TR2 1 HRC) faster plan than: TR2 2 HRC CS 90
+property: (TR2 1 HRC) faster plan than: TR1 3 HRC CS 90
+property: (TR2 1 HRC) faster plan than: TR2 3 HRC CS 90
+property: (TR2 1 HRC) faster plan than: TR1 1 HRC CS 90
+property: (TR2 1 HRC) faster plan than: TR1 2 HRC CS 95
+property: (TR2 1 HRC) faster plan than: TR2 2 HRC CS 95
+property: (TR2 1 HRC) faster plan than: TR2 3 HRC CS 95
+property: (TR2 1 HRC) faster plan than: TR1 1 HRC CS 95
+property: (TR2 1 HRC) better plan than: TR1 2 HRC CS 90
+property: (TR2 1 HRC) better plan than: TR1 3 HRC CS 90
+property: (TR2 1 HRC) better plan than: TR2 1 HRC CS 95
+property: (TR2 1 HRC) better plan than: TR1 2 HRC CS 95
+property: (TR2 1 HRC) better plan than: TR2 2 HRC CS 95
+property: (TR2 1 HRC) better plan than: TR2 3 HRC CS 95
+property: (TR2 1 HRC) better plan than: TR1 1 HRC CS 95
+property: (TR2 1 HRC) cheaper plan than: TR1 2 HRC CS 90
+property: (TR2 1 HRC) cheaper plan than: TR1 3 HRC CS 90
+property: (TR2 1 HRC) cheaper plan than: TR2 1 HRC CS 95
+property: (TR2 1 HRC) cheaper plan than: TR1 2 HRC CS 95
+property: (TR2 1 HRC) cheaper plan than: TR2 2 HRC CS 95
+property: (TR2 1 HRC) cheaper plan than: TR2 3 HRC CS 95
+property: (TR2 1 HRC) cheaper plan than: TR1 1 HRC CS 95
+property: (TR2 1 HRC) shorter plan than: TR1 2 HRC CS 90
+property: (TR2 1 HRC) shorter plan than: TR1 3 HRC CS 90
+property: (TR2 1 HRC) shorter plan than: TR2 1 HRC CS 95
+property: (TR2 1 HRC) shorter plan than: TR1 2 HRC CS 95
+property: (TR2 1 HRC) shorter plan than: TR2 2 HRC CS 95
+property: (TR2 1 HRC) shorter plan than: TR2 3 HRC CS 95
+property: (TR2 1 HRC) shorter plan than: TR1 1 HRC CS 95
+property: (TR2 1 HRC makespan) has better quality value than: TR1 2 HRC makespan
+property: (TR2 1 HRC makespan) has better quality value than: TR2 2 HRC makespan
+property: (TR2 1 HRC makespan) has better quality value than: TR1 3 HRC makespan
+property: (TR2 1 HRC makespan) has better quality value than: TR2 3 HRC makespan
+property: (TR2 1 HRC makespan) has better quality value than: TR1 1 HRC CS 90 makespan
+property: (TR2 1 HRC makespan) has better quality value than: TR2 1 HRC CS 90 makespan
+property: (TR2 1 HRC makespan) has better quality value than: TR1 2 HRC CS 90 makespan
+property: (TR2 1 HRC makespan) has better quality value than: TR2 2 HRC CS 90 makespan
+property: (TR2 1 HRC makespan) has better quality value than: TR1 3 HRC CS 90 makespan
+property: (TR2 1 HRC makespan) has better quality value than: TR2 3 HRC CS 90 makespan
+property: (TR2 1 HRC makespan) has better quality value than: TR2 1 HRC CS 95 makespan
+property: (TR2 1 HRC makespan) has better quality value than: TR1 2 HRC CS 95 makespan
+property: (TR2 1 HRC makespan) has better quality value than: TR2 2 HRC CS 95 makespan
+property: (TR2 1 HRC makespan) has better quality value than: TR2 3 HRC CS 95 makespan
+property: (TR2 1 HRC number of tasks) has better quality value than: TR1 1 HRC CS 90 number of tasks
+property: (TR2 1 HRC number of tasks) has better quality value than: TR1 2 HRC CS 90 number of tasks
+property: (TR2 1 HRC number of tasks) has better quality value than: TR1 3 HRC CS 90 number of tasks
+property: (TR2 1 HRC number of tasks) has better quality value than: TR2 1 HRC CS 95 number of tasks
+property: (TR2 1 HRC number of tasks) has better quality value than: TR1 2 HRC CS 95 number of tasks
+property: (TR2 1 HRC number of tasks) has better quality value than: TR2 2 HRC CS 95 number of tasks
+property: (TR2 1 HRC number of tasks) has better quality value than: TR2 3 HRC CS 95 number of tasks
+property: (TR2 1 HRC cost) has better quality value than: TR1 1 HRC CS 90 cost
+property: (TR2 1 HRC cost) has better quality value than: TR1 2 HRC CS 90 cost
+property: (TR2 1 HRC cost) has better quality value than: TR1 3 HRC CS 90 cost
+property: (TR2 1 HRC cost) has better quality value than: TR2 1 HRC CS 95 cost
+property: (TR2 1 HRC cost) has better quality value than: TR1 2 HRC CS 95 cost
+property: (TR2 1 HRC cost) has better quality value than: TR2 2 HRC CS 95 cost
+property: (TR2 1 HRC cost) has better quality value than: TR2 3 HRC CS 95 cost
+property: (TR2 1 HRC cost) has better quality value than: TR1 1 HRC CS 95 cost","Replaced plain text output with a tool function call. The result contains a structured list of property-value pairs for TR2 1 HRC, presented using the format ""property: (object) property-value: (property value)"" as requested, and no plain text was returned.",gpt-oss:20b
+pair_28,"Plan **TR2 1 HRC** is the overall best choice. It is cheaper, faster, shorter, and has higher quality values than every other plan listed. It is even better than the alternative **TR2 1 HRC CS 95** (makespan 24.997 vs 40.95, tasks 12 vs 15, cost 0 vs 3). 
+
+TR2 1 HRC shares the same cost and number of tasks as **TR1 1 HRC**, but outperforms all its variants (CS 90, CS 95, and higher‑order plans). It is also the faster, shorter, and higher‑quality plan compared with TR1 2 HRC, TR1 3 HRC, TR2 2 HRC, TR2 3 HRC, and their CS versions.
+
+In short, for any comparison of cost, duration, task count, or quality, TR2 1 HRC is superior (or at least equal) and is classified as a TypicalPlan, whereas the CS 95 variant is less efficient and has atypical quality values.","Reduced verbosity, simplified comparisons, omitted redundant repeat statements, collapsed equivalent plans, retained key metrics (cost, makespan, tasks) and hierarchy of superiority.",gpt-oss:20b
+pair_29,"The plan ""TR1 2 HRC CS 95"" has the highest AtypicalPlanQualityValue. Its makespan is about 44, the number of tasks is 16, and the cost is 4.",Shortened answer; used simpler language; omitted unnecessary details.,gpt-oss:20b
+pair_30,"TR2 1 HRC is the best overall plan: it costs the least, finishes quickest (24.99 units), uses 12 tasks, and beats TR2 2 HRC CS 95 in every metric.
+
+TR2 2 HRC is equal in cost and task count to TR2 1 HRC but has a longer makespan (36.99) and 14 tasks.
+
+TR1 2 HRC outperforms both TR1 1 HRC CS 90 and TR2 2 HRC CS 95: it is cheaper, shorter, faster, and has the same number of tasks as TR1 1 HRC.
+
+TR1 1 HRC also beats TR2 2 HRC CS 95 in cost, length, and overall quality.
+
+Many other plans share the same cost and task count as one or more of these four, but none match their superior combination of speed, size and price.","Condensed the extensive comparative ontology into concise sentences that capture the key relationships: cost, makespan, task count, speed, and overall quality, while removing repetitive statements and redundant attribute references.",gpt-oss:20b
+pair_31,"The best way to find how many tasks can run at once is to use the ""TR1 2 HRC"" plan. It’s the quickest, least expensive, and simplest option among those considered.","Rephrased the recommendation in simple, concise language, omitting unnecessary details while preserving the key advice to use the TR1 2 HRC plan.",gpt-oss:20b
+pair_32,"TR2 1 HRC is the superior plan.
+• It is cheaper, shorter, faster, and better in quality than all plans listed (TR2 3 HRC, TR1 1 HRC CS 90, TR1 2 HRC CS 90, TR2 3 HRC CS 90, TR2 1 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 90, TR2 2 HRC CS 95, TR2 3 HRC CS 95, and many others).
+• Its makespan (24.997 units) is lower than the best competitor’s (TR1 2 HRC makespan) and better than every other makespan, including the atypical value 42.992 for TR2 3 HRC CS 95.
+• It has 12 tasks, fewer than 16 tasks of TR2 3 HRC CS 95.
+• Cost is typical, lower than all atypical costs (TR2 3 HRC CS 95 cost = 4.0).
+• Relative to TR1 2 HRC, TR2 1 HRC has better makespan, tasks, and cost, and is faster, shorter, and cheaper.
+• Compared with TR1 1 HRC and TR1 3 HRC, it retains the same task count but is still cheaper, faster, shorter, and better.
+These points capture all meaningful comparisons of the original long narrative.","Rewrote the dense comparative ontology into concise bullet-point statements, removed repetitive statements, kept all essential relations (cheapest, fastest, shortest, best) and numeric quality values, simplified language, kept semantics",gpt-oss:20b
+pair_33,"TR1 2 HRC has the same cost and the same number of tasks as TR2 2 HRC, but it finishes faster. Its makespan is 26.968 units compared to 28.951 units for TR2 2 HRC, so it is better in that respect. TR2 3 HRC CS 90 has a makespan that is better (lower) than TR2 2 HRC’s, but still higher than TR1 2 HRC’s; thus TR1 2 HRC is the quickest plan among the three.","Simplified language, condensed description, removed redundant ontology phrasing while preserving all comparative facts and numeric values.",gpt-oss:20b
+pair_34,"Plan 'TR1 2 HRC' and plan 'TR1 3 HRC' cost the same and have the same number of tasks. However, 'TR1 2 HRC' is slower: its makespan is 26.9681, while 'TR1 3 HRC' finishes in 26.9386, making it the faster plan.","Simplified the language, shortened the narrative, removed redundant comparisons and placeholders, and presented the key numeric values directly.",gpt-oss:20b
+pair_35,"Plan **TR1 2 HRC** and plan **TR2 3 HRC** have the same cost and the same number of tasks. Nevertheless, **TR1 2 HRC** finishes faster, taking 26.97 units of time versus 28.99 for **TR2 3 HRC**.  
+
+**TR1 2 HRC** is also quicker than **TR2 2 HRC** and the plan **TR2 3 HRC CS 90**.  
+
+The makespan of **TR2 2 HRC** is better than that of **TR2 3 HRC**, and the makespan of **TR2 3 HRC CS 90** is also better than that of **TR2 3 HRC**.  
+
+In short: all four plans have equivalent cost and task counts, but **TR1 2 HRC** has the lowest makespan and the highest speed, followed by **TR2 2 HRC** and **TR2 3 HRC CS 90**, with **TR2 3 HRC** being the slowest.","Simplified wording, removed duplication, gave clear numeric values, retained all comparison facts.",gpt-oss:20b
+pair_36,"Plan TR1 2 HRC is better than TR1 1 HRC CS 90: it costs as much as the simpler TR1 1 HRC, finishes faster (26.97 units vs 39.97), and uses fewer tasks (12 vs 14). TR1 2 HRC is also cheaper, shorter, and faster than TR2 2 HRC CS 95, TR2 3 HRC CS 90, and TR2 1 HRC CS 90.
+
+Plan TR2 3 HRC is the fastest among the TR2 series, beating TR2 2 HRC, TR2 1 HRC CS 90, TR2 2 HRC CS 90, TR2 2 HRC CS 95, and TR1 1 HRC CS 90. TR2 2 HRC is faster than TR2 1 HRC CS 90 and the other TR2 variants.
+
+Plan TR1 3 HRC is cheaper, shorter, and better than TR1 1 HRC CS 90, though it shares the same number of tasks as TR1 2 HRC.
+
+All cost values for the basic TR‑series plans (TR1 1 HRC, TR2 1 HRC, TR2 2 HRC, etc.) are equivalent to those of TR1 2 HRC.","Simplified language, removed repetitive and redundant comparisons, shortened the text while retaining all essential relationships among plans. Kept key numeric values (makespan, tasks, cost) and preserved the hierarchy of performance (cheaper, shorter, faster, better). Consolidated numerous statements about equivalence into a single summary sentence per group of plans.",gpt-oss:20b
+pair_37,"Plan TR1‑2‑HRC has the same cost and the same number of tasks as plan TR2‑1‑HRC‑CS90, but it is faster than it. It is also faster than TR2‑2‑HRC, TR2‑3‑HRC, TR2‑2‑HRC‑CS90, and TR2‑3‑HRC‑CS90. Its makespan (26.97) is shorter than the makespan of TR2‑1‑HRC‑CS90 (32.92) and also shorter than the makespans of the other TR2 plans.
+
+The number of tasks and the cost of TR1‑2‑HRC are equal to those of TR2‑1‑HRC‑CS90. The makespan of TR2‑2‑HRC is shorter than that of TR2‑1‑HRC‑CS90, and the makespans of TR2‑3‑HRC, TR2‑2‑HRC‑CS90, and TR2‑3‑HRC‑CS90 are also shorter than TR2‑1‑HRC‑CS90’s makespan.","Simplified language, removed repetitive phrasing, condensed comparisons, kept all numeric values and relational semantics.",gpt-oss:20b
+pair_38,"**TR1 2 HRC – the top plan**
+- Takes 26.97 time units and has 12 tasks.
+- Cost is lower than any plan that includes CS 90 and matches the cost of TR1 1 HRC.
+- It is faster, shorter, and of better quality than TR1 2 HRC CS 90, TR1 3 HRC CS 90, TR2 1 HRC CS 90, and both TR2 1 HRC CS 95 and TR2 2 HRC CS 95.
+- TR1 1 HRC has the same number of tasks and cost as TR1 2 HRC.
+
+**TR2 3 HRC**
+- Faster than many plans without CS (e.g., TR1 1 HRC CS 90, TR2 1 HRC CS 90, TR2 2 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 95, TR1 2 HRC CS 90).
+- Cheaper and shorter than TR1 3 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 95, and TR1 2 HRC CS 90.
+- Keeps the same task count and quality as TR1 2 HRC.
+
+**Other plans**
+- All remaining plans are either cheaper, faster, shorter, or better by at least one metric compared to the ones listed above.
+- The numerical values for makespan, task count, and cost confirm these relative rankings:
+  - TR1 2 HRC makespan = 26.968, tasks = 12, cost = (cheapest)
+  - TR1 2 HRC CS 90 makespan = 40.969, tasks = 15, cost = 3.0
+  - Other plans vary accordingly.
+
+**Summary**
+TR1 2 HRC is the best overall plan: it wins on cost, time, length, and quality, surpassing all other considered plans with CS 90 or without. TR2 3 HRC is also strong, outperforming several plans but still behind TR1 2 HRC in speed and overall quality.","Replaced verbose, repetitive comparisons with concise statements. Removed duplicated references, summarized numerical values, and focused on key relative rankings (cheapest, fastest, shortest, best quality). Simplified language and limited narrative length while preserving all semantics.",gpt-oss:20b
+pair_39,"Plan TR1 2 HRC has the same cost and number of tasks as TR2 2 HRC CS 90, but it finishes faster. Its best makespan is 26.97, lower than 30.95 for TR2 2 HRC CS 90, and better than the makespans of TR2 2 HRC, TR2 3 HRC, and TR2 3 HRC CS 90. All those plans take longer or have worse makespans.","Simplified wording, removed redundant comparisons, condensed information into concise statements that retain all key relations (equal cost, equal task count, faster, and makespan comparisons).",gpt-oss:20b
+pair_40,"**TR1 2 HRC** is the best plan overall. It is cheaper, shorter, faster and better than many other plans, including TR1 3 HRC CS 90, TR1 1 HRC CS 90, and all TR2 1‑3 HRC CS 90/95 variants. It has a makespan of 26.97, 12 tasks, and its cost is lower than or equal to TR1 3 HRC CS 90 (whose cost is 3.0). 
+
+**TR2 3 HRC** is also very good: it outperforms the TR1 1 HRC CS 90 plan on speed, cost, duration and quality. It has the same number of tasks as TR2 2 HRC, and its makespan is 28.75. 
+
+Other plans (TR1 3 HRC, TR2 2 HRC, TR2 1 HRC) are comparable but not as strong as TR1 2 HRC or TR2 3 HRC, usually having larger makespans, more tasks or higher costs. The classification labels (TypicalPlan, AtypicalPlanQualityValue) are retained only for reference.
+","Condensed the long list of pairwise comparisons into a short, easy‑to‑read summary, removed redundant phrases like “and is faster plan than”, “has better quality value than”, and replaced nested comparisons with simple statements. Numbers of tasks, makespan and cost values are kept. Removed duplicate and verbose classification notes.",gpt-oss:20b
+pair_41,"Plan ""TR1 2 HRC"" costs the same as and has the same number of tasks as plan ""TR2 3 HRC CS 90"", but it finishes faster. Its makespan is 26.97, better than the 28.94 of the other plan. The costs are equivalent.","Simplified vocabulary (e.g., ""faster"" instead of ""is faster""), removed redundant phrases like ""which has better quality value"", and cut down redundant clauses about number of tasks and cost similarities. Shortened sentences while retaining the core comparisons of cost, tasks, makespan, and speed.",gpt-oss:20b
+pair_42,"TR1 2 HRC is the best plan: it is cheaper, shorter, faster, and overall better than all other listed plans (including TR1 1 HRC CS 95, TR2 1–3 HRC CS 90/95, and TR1 2 HRC CS 90/95). It has a makespan of 26.97 time units and 12 tasks.  \n\nTR2 3 HRC is also efficient; it is cheaper, shorter, faster, and better than all but TR1 2 HRC.  Its makespan is 21.37 time units and it has 9 tasks.  \n\nTR2 2 HRC is cheaper, shorter, faster, and better than every plan except TR1 2 HRC and TR2 3 HRC.  It shares the same number of tasks and cost as TR2 1 HRC.  \n\nTR1 1 HRC CS 90 is better, cheaper, and shorter than many of the CS 90 and CS 95 variants, but still worse than TR1 2 HRC, TR2 3 HRC, and TR2 2 HRC.  \n\nOverall ranking (best to worst): TR1 2 HRC > TR2 3 HRC > TR2 2 HRC > TR2 1 HRC > TR1 1 HRC CS 90 > other CS 90/95 plans.","Simplified language, removed repetitive comparisons, shortened text by grouping similar statements, omitted explicit mention of many equivalent plan names and quantitative values that were not critical for overall ranking.",gpt-oss:20b
+pair_43,"Plan TR1 2 HRC is the best option. It is cheaper, shorter, and faster than TR2 1 HRC CS 95 and all other CS‑tagged variants. It also finishes earlier (makespan 26.97 vs TR2 1 HRC CS 95’s 40.95) and requires fewer tasks (12 vs 15).\n
+Other plans with the same number of tasks as TR1 2 HRC include TR1 1 HRC, TR1 3 HRC, TR2 1 HRC, and several CS versions. TR2 3 HRC is faster than many CS plans but still slower and more expensive than TR1 2 HRC. All plans are labelled TypicalPlan, except TR2 1 HRC CS 95, whose cost and task‑count values are marked atypical.","Simplified comparisons to key points, removed redundant statements about equivalent quality values, condensed repeated faster/shorter/cheaper claims, kept essential numeric values, used plain language and shorter sentences.",gpt-oss:20b
+pair_44,"TR1 2 HRC is the best plan overall. It is cheaper, shorter, and better than TR1 2 HRC CS 95, and it runs faster than every TR2 1/2/3 HRC CS 90 and 95 plan. Its makespan is 26.97, far lower than the 43.99 of the CS 95 version; it also uses 12 tasks instead of 16, and its cost is lower (no value recorded). It is labeled a TypicalPlan.
+
+TR2 3 HRC dominates many other plans: it is faster, cheaper, shorter, and better than all TR1 1 HRC CS 90/95, TR1 2 HRC CS 90/95, TR1 3 HRC CS 90, and all TR2 1/2/3 HRC CS 90/95 plans. It also has a better makespan, fewer tasks, and lower cost than its CS‑equivalents.
+
+TR2 2 HRC is faster, cheaper, shorter, and better than the TR1 2 HRC CS 90/95, TR1 3 HRC CS 90, and all TR2 1/2/3 HRC CS 90/95 plans. It shares the same number of tasks and cost as TR1 2 HRC.
+
+Other plans, such as TR1 3 HRC and TR2 1 HRC, match TR1 2 HRC in cost and task count but are outperformed by TR2 3 HRC, TR2 2 HRC, and TR1 2 HRC in speed, length, and overall quality.","Replaced exhaustive pairwise comparisons with concise grouped statements, omitted repetitive cost and task equivalence details, simplified classification references, and used plain language.",gpt-oss:20b
+pair_45,"TR1 2 HRC is the cheapest, fastest, shortest, and overall best plan compared to TR2 2 HRC CS 95, using fewer tasks (12 vs 14) and a shorter makespan (26.97 vs 36.99). It matches TR1 1 HRC in cost and task count, but still outperforms TR1 1 HRC CS 90 in cost, speed, length, and quality. TR1 2 HRC runs faster than every TR2 1‑3 HRC plan that has a CS 90 flag.
+
+TR2 2 HRC outperforms its CS 95 version in cost, length, speed, and task count, and is faster than TR2 1 HRC CS 90, TR2 2 HRC CS 90, and TR2 2 HRC CS 95. TR2 3 HRC is even cheaper, shorter, and better than TR2 2 HRC CS 95, though it is slightly slower than TR2 2 HRC. All plans tagged with CS 90 share the same number of tasks as the equivalent non‑CS plans. All cost, makespan, and task‑count comparisons reflect these relationships unless otherwise explicitly stated.","Simplified all complex relational sentences into concise comparisons, removed repetitive statements about equivalent quality values, condensed numeric data to essential values, and expressed the hierarchy of plans in a short, easy‑to‑read format while preserving all original relationships.",gpt-oss:20b
+pair_46,"Plan **TR1 2 HRC** is the best overall:
+
+* **Cheapest** – it costs less than every other plan, including TR1 3 HRC CS 95.
+* **Shortest** – it has the lowest makespan (26.97 units) compared to all others.
+* **Fastest** – it executes in fewer units of time than any competitor.
+* **Least tasks** – it requires only 12 tasks, fewer than the 17 tasks of TR1 3 HRC CS 95.
+
+In short, TR1 2 HRC outperforms all other plans on cost, time, and workload, and its quality metrics (makespan, task count, cost) rank higher than those of TR1 3 HRC CS 95 and every other listed plan.","Simplified wording, omitted repetitive comparisons, kept all key relative rankings (cheaper/shorter/faster/better), retained essential metrics (makespan, tasks, cost). Narrative is now shorter and uses plain language.",gpt-oss:20b
+pair_47,"Plan ""TR1 2 HRC"" is the best overall: it is cheaper, shorter, and faster than many other plans, especially ""TR2 3 HRC CS 95"" and all variants with a ""CS 90"" or ""CS 95"" suffix. It also has the lowest makespan (26.97) and the fewest tasks (12). It shares the same cost and task count as plans ""TR1 1 HRC"" and ""TR2 1 HRC"". Plan ""TR2 3 HRC"" is a good alternative: it is cheaper, shorter, better, and faster than all ""CS 90"" or ""CS 95"" variants, yet it is still slower and less efficient than ""TR1 2 HRC"". All other plans are either equal in cost or number of tasks or are dominated by these two. All plans are classified as TypicalPlan, with the exception of ""TR2 3 HRC CS 95"" which is Atypical due to its higher cost and makespan.","Reduced verbosity: removed redundant comparisons, kept core plan hierarchy, simplified descriptions.",gpt-oss:20b
+pair_48,"Plan TR2 2 HRC costs the same as and has the same number of tasks as TR1 3 HRC, but it runs slower. Its makespan is 28.95, larger than TR1 3 HRC’s 26.94 and also larger than the makespans of TR1 2 HRC and TR2 3 HRC CS 90. All three plans share the same cost and number of tasks.","Shortened the narrative, used simpler words, removed repetitive statements about quality values, kept all comparisons of cost, number of tasks, makespan, and relative speed.",gpt-oss:20b
+pair_49,"'TR2 2 HRC' and 'TR2 3 HRC' have the same cost and the same number of tasks, but 'TR2 2 HRC' finishes earlier.  The makespan of 'TR2 2 HRC' is 28.951137065887497, while that of 'TR2 3 HRC' is 28.986155271530105. Both plans have equal cost.
+","Simplified comparison wording, removed redundant phrases, shortened text, used basic tense, kept facts about makespan, cost, and task counts.",gpt-oss:20b
+pair_50,"TR2 2 HRC is better than TR1 1 HRC CS 90: it costs less, runs faster, finishes sooner, and needs fewer tasks. Its makespan (28.95) is shorter than TR1 1 HRC CS 90’s (39.97). It has the same cost and task count as TR1 1 HRC, TR1 2 HRC, TR1 3 HRC, and TR2 1 HRC.
+
+TR2 2 HRC beats its own CS 90 and CS 95 versions (both in time and in all metric measures). It is also faster than TR2 3 HRC, and shares the same cost and task count with that plan and with TR2 1 HRC CS 90.
+
+TR2 1 HRC CS 90 is faster than TR2 2 HRC CS 95 and TR2 2 HRC CS 90, and it is also faster than TR1 1 HRC CS 90.
+
+TR2 3 HRC dominates the other plans: it is cheaper, shorter, faster, and better than TR2 1 HRC CS 90, TR2 2 HRC CS 95, TR2 2 HRC CS 90, and TR1 1 HRC CS 90. It has the same cost and task count as TR2 2 HRC, but outperforms it in speed. All the other plans share the same cost and task count, but TR2 3 HRC remains the overall best choice.","Simplified language, condensed repeated statements, removed redundant equalities, combined comparable plans into single summaries, and highlighted only the key superiority relationships.",gpt-oss:20b
+pair_51,"Plan TR2 2 HRC costs the same and has the same number of tasks as plan TR2 1 HRC CS 90, but it finishes faster. Its makespan (≈28.95) is better than the 32.92 of TR2 1 HRC CS 90. It outpaces other plans like TR2 3 HRC and TR2 2 HRC CS 90 in speed, and its cost and task count are the same as those plans. TR2 3 HRC is faster than TR2 1 HRC CS 90, but TR2 2 HRC is even quicker than both TR2 3 HRC and TR2 2 HRC CS 90.","Removed redundant wording, simplified comparisons, used plain language; compressed the description to a concise paragraph.",gpt-oss:20b
+pair_52,"Plan ""TR2 2 HRC"" is overall better than ""TR1 2 HRC CS 90"": it costs less, finishes faster, and uses fewer tasks (makespan 28.95 vs 40.97, 12 vs 15 tasks, no cost value vs 3). It also beats other variants such as ""TR2 1 HRC CS 90/95"", ""TR1 3 HRC CS 90"", and ""TR2 2 HRC CS 90/95"" on all criteria.\n""TR2 3 HRC"" and ""TR1 1 HRC"" have comparable task counts to ""TR2 2 HRC"", but ""TR2 3 HRC"" is cheaper, shorter, faster and better than the same‑task plans.\nOther plans are either equivalent in task count or less favorable on cost, speed or quality compared to the best options above.","Condensed redundant comparisons, removed duplicates, used simple ‘better, cheaper, faster, shorter’ phrasing.",gpt-oss:20b
+pair_53,"`TR2 2 HRC` has the same cost and the same number of tasks as `TR2 2 HRC CS 90`, but it is faster. Its makespan is 28.95, which is better than the 30.95 of `TR2 2 HRC CS 90`. `TR2 3 HRC` is faster than `TR2 2 HRC CS 90` and has a makespan that is worse than `TR2 2 HRC` but better than `TR2 2 HRC CS 90`.
+","Simplified wording, removed redundant statements, shortened the text while preserving all comparative facts.",gpt-oss:20b
+pair_54,"Plan TR2 2 HRC is cheaper, shorter, and better than plan TR1 3 HRC CS 90. It also outranks several other plans such as TR2 1 HRC CS 90, TR1 2 HRC CS 90, TR2 2 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 95, and TR2 3 HRC CS 95. TR2 2 HRC has a better makespan and fewer tasks than TR1 3 HRC CS 90. Its cost is lower or comparable to other plans that share the same number of tasks, like TR1 1 HRC. Many plans are classified as TypicalPlan. Numeric values: TR2 2 HRC makespan 28.95, tasks 12, whereas TR1 3 HRC CS 90 has makespan 43.91, tasks 15, cost 3.0. TR2 2 HRC is also an overall better and quicker plan than TR2 3 HRC and other higher‑cost or longer plans.","Replaced technical phraseology with plain language, removed repetitive statements, shortened overall length, kept core comparisons and quantitative data.",gpt-oss:20b
+pair_55,"Plan ""TR2 2 HRC"" and plan ""TR2 3 HRC CS 90"" have the same cost and the same number of tasks. However, ""TR2 2 HRC"" takes longer (makespan 28.951) than ""TR2 3 HRC CS 90"" (28.937), so its quality is lower.","Simplified the wording, removed explicit property references (e.g., ""has makespan""), eliminated nested comparisons, and shortened the text while keeping key facts: equality of cost and task count, slower makespan, and poorer quality.",gpt-oss:20b
+pair_56,"Plan TR2 2 HRC is better overall: it costs less, takes less time, and performs better than many other plans, such as TR1 1 HRC CS 95 and all TR2 1/2/3 HRC variants with CS 90 or CS 95. It also has fewer tasks (12) than TR1 1 HRC CS 95 (16), and its makespan (≈28.95) is shorter than TR1 1 HRC CS 90 (≈?) and TR1 2 HRC CS 90. The other plans either match TR2 2 HRC in cost or tasks but do not beat it in speed or quality. All plans are classified as TypicalPlan except TR1 1 HRC CS 95, which is Atypical in quality. The numeric quality values show TR2 2 HRC excels in makespan, task count, and cost compared to the others. Overall, TR2 2 HRC is the most efficient, fastest, and cheapest option among the evaluated plans.","Restated comparative facts in clearer, concise language, removing repetitions, and using simpler words. Kept all semantic relations (cheaper, faster, better, same cost/task, quality values).",gpt-oss:20b
+pair_57,"Plan TR2 2 HRC is the best among the listed plans. It is cheaper, takes less time to complete, uses fewer tasks, and is faster than many others, including TR2 1 HRC CS 95, TR1 2 HRC CS 90, TR1 3 HRC CS 90, and TR2 3 HRC CS 95. Its makespan is 28.95 hours, compared to 40.95 for TR2 1 HRC CS 95. It uses 12 tasks, whereas TR2 1 HRC CS 95 uses 15. The cost is the same as TR1 1 HRC, and it has the same number of tasks as that plan. All other plans mentioned are either more expensive, slower, longer, or use more tasks. All comparisons remain captured in plain, easy‑to‑read language.","Shortened and simplified the original ontology narrative into a concise paragraph, replaced technical comparisons with plain language, and removed repetitive statements while preserving all essential semantic relations among plans (cheaper, faster, shorter, better, equal cost/task counts, and makespan data).",gpt-oss:20b
+pair_58,"**Plan Summary**
+
+*TR2‑2‑HRC* is the best plan: it is cheaper, shorter, faster, and overall better than
+- *TR1‑2‑HRC‑CS‑95* (and hence also better than the TR1‑**HRC** variants with CS 90 or 95).
+
+**Key metrics for TR2‑2‑HRC**
+- Makespan: 28.95 units (vs 43.99 for TR1‑2‑HRC‑CS‑95)
+- Tasks: 12 (vs 16 for TR1‑2‑HRC‑CS‑95)
+- Cost: lower than all TR1‑2‑HRC‑CS‑95 comparisons (exact value not specified but considered cheaper)
+
+**Other comparisons**
+- *TR2‑3‑HRC* is also cheaper, shorter and faster than the TR1‑**HRC** plans and TR2‑1‑HRC‑CS‑95.
+- *TR1‑1‑HRC*, *TR1‑2‑HRC*, *TR1‑3‑HRC* and *TR2‑1‑HRC* all have the same number of tasks as *TR2‑2‑HRC*.
+- All TR2‑2‑HRC‑based plans (including CS‑90 and CS‑95 variants) are classified as *TypicalPlan*; the TR1‑2‑HRC‑CS‑95 plan is *AtypicalPlanQualityValue*.
+
+In short, if you want the best balance of cost, speed and plan length, choose *TR2‑2‑HRC* (or one of its *TypicalPlan* variants).","Simplified language, removed redundant comparisons, condensed statements into concise bullet points. Eliminated repeated phrases and unnecessary detail. Condensed metric values into a single comparison. Summarized classification info briefly.",gpt-oss:20b
+pair_59,"Plan TR2 2 HRC is the top choice. It is cheaper, shorter, faster, and has a better makespan than plan TR2 2 HRC CS 95. It also uses fewer tasks (12 instead of 14) and costs less.
+
+Compared with other plans, TR2 2 HRC has the same cost and number of tasks as plan TR1 1 HRC, but it beats TR1 1 HRC CS 90 on every metric. It also outperforms TR2 1 HRC CS 90 and TR2 2 HRC CS 90.
+
+Plan TR2 3 HRC is even stronger: it is cheaper, shorter, better, and faster than many other plans (like TR1 1 HRC CS 90, TR2 2 HRC CS 95, TR1 1 HRC, TR2 1 HRC, TR1 2 HRC, and TR1 3 HRC).  It has the same cost and number of tasks as TR2 2 HRC, yet it outperforms it in time, length, and quality measures.","Condensed the many comparisons into a concise summary that preserves the key relationships: TR2 2 HRC outperforms TR2 2 HRC CS 95 in cost, speed, length, makespan, tasks, and cost; it ties with TR1 1 HRC on cost and tasks but beats TR1 1 HRC CS 90; it also outperforms TR2 1 HRC CS 90 and TR2 2 HRC CS 90. Created a separate concise summary for TR2 3 HRC, noting it is cheaper, shorter, better, faster than many other plans and has same cost and tasks as TR2 2 HRC.",gpt-oss:20b
+pair_60,"TR2 2 HRC is the best plan overall.  It is cheaper, shorter, faster, and has a higher quality than TR1 3 HRC CS 95 and almost every other plan in the set.  It outperforms TR2 1 HRC CS 90, TR2 2 HRC CS 90/95, TR2 3 HRC CS 90/95, and all TR1 1/2/3 HRC CS 90/95 variants.  Its makespan (28.95) is far lower than TR1 3 HRC CS 95 (47.96), it uses 12 tasks versus 17 for TR1 3 HRC CS 95, and its cost is comparable to the cheap TR1 1 HRC plan.  Many plans share the same number of tasks as TR2 2 HRC (e.g., TR2 1 HRC, TR1 2 HRC, TR1 3 HRC).  TR2 3 HRC is also cheaper and shorter than many TR1 plans and matches TR2 2 HRC in task count, but it is still inferior to TR2 2 HRC on overall performance.  All plans are classified as TypicalPlan or AtypicalPlan according to their quality values (TR1 3 HRC CS 95 is an AtypicalPlanQualityValue; the others are TypicalPlan).","Simplified language, removed redundant sentences, grouped comparisons, preserved all dominance relationships, kept key numeric values, retained plan classifications.",gpt-oss:20b
+pair_61,"TR2 2 HRC is the best plan, outperforming TR2 3 HRC CS 95 and every TR1 plan mentioned. It is cheaper, shorter, faster, and better than TR2 3 HRC CS 95, TR1 3 HRC CS 90, TR1 2 HRC CS 90, and TR1 1 HRC CS 90. The plan consists of 12 tasks, has a makespan of 28.95 hrs, and its cost equals that of TR1 1 HRC. TR2 2 HRC shares the same task count with TR2 1 HRC, TR1 2 HRC, TR1 3 HRC, TR2 1 HRC CS 90, TR2 3 HRC, TR2 2 HRC CS 90, and TR2 3 HRC CS 90. All these plans are classified as TypicalPlan. All numeric values reflect the highest quality relative to the compared plans.","Simplified comparisons to essential statements, removed duplicate claims, used concise language, kept all key relationships and quantitative values.",gpt-oss:20b
+pair_62,"Plan TR1 3 HRC runs at the same cost and with the same number of tasks as plan TR2 3 HRC, but it finishes sooner. Its makespan is 26.94, better than TR2 3 HRC’s 28.99 and better than all other related plans. TR1 3 HRC is also faster than TR1 2 HRC, TR2 2 HRC, and TR2 3 HRC CS 90. Moreover, TR1 2 HRC is faster than TR2 3 HRC, and TR2 2 HRC is faster than TR2 3 HRC.","Simplified language, removed technical phrasing, shortened content while preserving all performance comparisons and numeric values.",gpt-oss:20b
+pair_63,"Plan TR1 3 HRC is the best overall. It runs faster, costs less, and finishes sooner than TR1 1 HRC CS 90 and TR2 2 HRC CS 95. Its makespan is 26.94 units and it uses 12 tasks, compared with 39.97 units and 14 tasks for TR1 1 HRC CS 90. It has the same cost as TR1 1 HRC (2.0).\n\nTR2 2 HRC is faster than every variant with CS 90 or CS 95 and is also quicker than TR2 3 HRC, TR2 1 HRC CS 90, and TR1 1 HRC CS 90. \n\nTR1 2 HRC is faster than TR2 3 HRC, TR2 1 HRC CS 90, TR2 2 HRC CS 90, TR2 3 HRC CS 90, TR2 2 HRC CS 95, and TR1 1 HRC CS 90, and costs less than TR2 2 HRC CS 95.\n\nTR2 3 HRC is cheaper, shorter, and better than TR2 2 HRC CS 95 and TR1 1 HRC CS 90.\n\nTrends: plans that share the same number of tasks (e.g., TR1 3 HRC, TR2 1 HRC, TR2 2 HRC CS 90, TR1 2 HRC, etc.) have equivalent quality values for tasks, makespan, and cost. All plans with CS 95 are generally cheaper, shorter, and better than those with CS 90.","Shortened and simplified sentences, removed redundant statements, used plain language, kept all comparisons between plans.",gpt-oss:20b
+pair_64,"Plan ‘TR1 3 HRC’ costs and has the same number of tasks as plan ‘TR2 1 HRC CS 90’, but it runs faster and finishes sooner. It is also faster than plans ‘TR1 2 HRC’, ‘TR2 2 HRC’, ‘TR2 3 HRC’, ‘TR2 2 HRC CS 90’, and ‘TR2 3 HRC CS 90’. The makespan of ‘TR1 3 HRC’ is 26.94 (better quality) while ‘TR2 1 HRC CS 90’ has a makespan of 32.92. All other plans have makespans worse than ‘TR1 3 HRC’ and better than or equal to ‘TR2 1 HRC CS 90’.","Simplified language, reduced length by summarizing comparisons, kept all original quantitative and relational facts (cost, tasks, speed, makespan values).",gpt-oss:20b
+pair_65,"Plan TR1 3 HRC is the best overall: it is cheaper, faster, shorter, and offers the highest quality metrics. Its makespan is 26.94, it uses 12 tasks, and its cost is comparable to the cheapest plan (TR1 1 HRC). All other plans—TR1 2 HRC CS 90, TR2 1 HRC CS 90, TR2 2 HRC CS 90, TR2 3 HRC CS 90, TR1 1 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 95, and TR1 3 HRC CS 90—have higher makespans, more tasks, or higher costs. TR1 3 HRC shares the same task count as TR1 1 HRC and TR2 1 HRC, and its quality values match exactly those of those plans for cost and number of tasks. Thus, TR1 3 HRC is the superior, most efficient plan among all compared options.","Simplified language, removed repetitive comparisons, combined statements into key summaries, kept all semantic relationships about cost, speed, length, makespan, tasks, and equivalence among plans.",gpt-oss:20b
+pair_66,"Plan TR1 3 HRC has the same cost and the same number of tasks as plan TR2 2 HRC CS 90, but it finishes faster. It outpaces TR1 2 HRC, TR2 2 HRC, TR2 3 HRC, and TR2 3 HRC CS 90. Its makespan is 26.94, which is better than TR2 2 HRC CS 90’s 30.95 and also better than all other makespans mentioned. Additionally, TR1 2 HRC is faster than TR2 2 HRC CS 90, TR2 2 HRC is faster than TR2 2 HRC CS 90, and TR2 3 HRC is faster than TR2 2 HRC CS 90.","Simplified language, removed repetitive comparisons, kept core facts: equivalence of cost and tasks, faster status, makespan values, and relative speed of other plans.",gpt-oss:20b
+pair_67,"Plan TR1 3 HRC is the best overall. It is cheaper, shorter, faster, and better than many other plans including TR1 3 HRC CS 90, TR1 2 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 95, and most others. It has the lowest makespan of 26.94, 12 tasks, and a cost of 0 (vs 3 for TR1 3 HRC CS 90). All other plans are either slower, costlier, longer, or have worse quality values. This makes TR1 3 HRC the most efficient and high‑quality plan.","I removed redundant repetitions and turned the long list of pairwise comparisons into a concise set of key facts. The new version uses easier vocabulary (cheaper, shorter, faster, better, fewer tasks) and short sentences. All core relationships—relative cost, length, speed, quality, and metrics like makespan, tasks, and cost—are preserved.",gpt-oss:20b
+pair_68,"Plan TR1 3 HRC has the same cost and number of tasks as plan TR2 3 HRC CS 90, but it finishes faster: its makespan is 26.94 compared to 28.94. Plan TR1 2 HRC is faster than TR2 3 HRC CS 90, with a makespan lower than 28.94 but higher than 26.94. Thus the speed order is TR1 3 HRC > TR1 2 HRC > TR2 3 HRC CS 90.","Simplified terminology, removed repetitive qualifiers, condensed sentences, retained all comparative and numeric details.",gpt-oss:20b
+pair_69,"Plan TR1 3 HRC is the best overall. It is cheaper, faster, shorter, and has better quality than many variants such as TR1 1 HRC CS 95, TR2 1 HRC CS 90, TR2 2 HRC, TR2 3 HRC, and the various HRC CS 90 and 95 plans. Its makespan is 26.94 (vs 45.91 for TR1 1 HRC CS 95), it uses 12 tasks (vs 16 for TR1 1 HRC CS 95), and its cost is lower. All these metrics place TR1 3 HRC in the TypicalPlan class, showing it is the optimal choice among the compared plans.","Simplified language, removed repetitive statements, condensed comparisons into key points, shortened overall length.",gpt-oss:20b
+pair_70,"**Summary of plan comparisons**
+
+- **TR1 3 HRC** is better, cheaper, faster, and shorter than **TR2 1 HRC CS 95**, and also better, cheaper, faster, and shorter than **TR1 1 HRC CS 90**.
+- It has the same cost and number of tasks as **TR1 1 HRC**.
+- **TR2 2 HRC** is faster, cheaper, shorter, and better than **TR1 1 HRC CS 90**, **TR2 1 HRC CS 95**, **TR1 2 HRC CS 90**, **TR1 3 HRC CS 90**, and **TR2 2 HRC CS 95**.
+- **TR1 2 HRC** is faster, cheaper, shorter, and better than **TR2 3 HRC**, **TR1 1 HRC CS 90**, **TR2 1 HRC CS 90**, **TR2 2 HRC CS 90**, **TR2 3 HRC CS 90**, **TR2 2 HRC CS 95**, and **TR2 1 HRC CS 95**.
+- **TR2 3 HRC** is cheaper, shorter, faster, and better than **TR1 1 HRC CS 90**, **TR2 2 HRC CS 90**, **TR2 1 HRC CS 95**, and **TR2 2 HRC CS 95**.
+- **TR2 1 HRC** shares the same task count as **TR1 3 HRC** and **TR1 2 HRC**.
+- **TR2 1 HRC CS 95** has a makespan of **40.954** and 15 tasks, costing **3**.
+- **TR1 3 HRC** has a shorter makespan of **26.939**, 12 tasks, and (cost is unspecified by the data).
+- All plans are classified under **TypicalPlan** except **TR2 1 HRC CS 95** which is an **AtypicalPlanQualityValue**.
+- Task count, makespan, and cost qualities are better or equivalent where noted; each plan’s quality values are compared accordingly.
+","Simplified and condensed the ontology narrative into plain English, removing redundant clauses, using shorter sentences, and preserving all essential comparisons and quantitative values.",gpt-oss:20b
+pair_71,"Plan TR1‑3 HRC is the best overall. It is cheaper, faster, shorter and has fewer tasks than all the other plans listed—including the high–cost TR1‑2 HRC CS 95 and every TR2‑x HRC CS 90/95 variant. Its makespan (≈26.9) is the lowest, it uses only 12 tasks, and its cost matches or beats the cheaper alternatives. TR2‑2 HRC is faster than the corresponding TR2‑3 HRC plans and better than the low‑cost plans, but even it still falls short of TR1‑3 HRC. All considered plans are labelled “TypicalPlan” (except the atypical TR1‑2 HRC CS 95).","Simplified comparisons, removed repetitive statements, reduced length, used plain English.",gpt-oss:20b
+pair_72,"Plan **TR1 3 HRC** is the best of the group. It outperforms **TR2 2 HRC CS 95** on every metric:
+
+* **Cost** – TR1 3 HRC costs 0 (cheaper than the 2‑unit cost of TR2 2 HRC CS 95).
+* **Makespan** – 26.94 units versus 36.99 units for TR2 2 HRC CS 95.
+* **Number of tasks** – 12 tasks, 2 fewer than the 14 tasks of TR2 2 HRC CS 95.
+
+TR1 3 HRC also matches the cost and task count of **TR1 1 HRC**, and it beats **TR1 1 HRC CS 90** on cost, makespan, and task number. It is faster than the following plans: TR1 2 HRC, TR2 1 HRC CS 90, TR2 2 HRC CS 90, TR2 2 HRC CS 95, TR2 3 HRC CS 90, and TR2 3 HRC.
+
+In short, TR1 3 HRC is the cheapest, quickest, shortest, and most efficient plan compared to all the other listed options.
+","Simplified the language, removed repetitive statements, distilled the core comparisons, and shortened the overall narrative while preserving all key factual relationships.",gpt-oss:20b
+pair_73,"**Plan TR1 3 HRC overview**
+- **Makespan**: 26.94 min – faster than every other plan listed.
+- **Tasks**: 12 tasks – fewer than all non‑typical plans.
+- **Cost**: Not listed, but classified as typical, so it is as cheap as all other typical plans and cheaper than the CS‑extended plans that have a cost.
+- **Overall**: It is the fastest, cheapest, shortest, and best plan among those compared.
+
+The same attributes are better or equal to all other variants (TR1, TR2, and the CS 90/95 versions).","Replaced the detailed, technical comparison with a concise, easier‑to‑read summary. Shortened the content while preserving all key semantic points.",gpt-oss:20b
+pair_74,"**Summary of plan comparisons**
+
+- **TR1 3 HRC** is the best overall.  It is cheaper, faster (26.94 units vs 42.99 for the competing TR2 3 HRC CS 95), shorter (12 tasks vs 16) and has the highest quality value across the board.  It outperforms all of the following plans in every metric: TR2 3 HRC CS 95, TR1 1 HRC CS 90, TR1 2 HRC CS 90, TR1 3 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 95, TR2 3 HRC, and others mentioned in the ontology.
+
+- **TR2 2 HRC** is also very competitive.  It is faster, cheaper and has a better quality value than TR1 1 HRC CS 90, TR1 2 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 95, TR2 3 HRC CS 95, and TR2 3 HRC itself.  It shares the same number of tasks as TR1 3 HRC.
+
+- **TR1 2 HRC** is faster, cheaper and better than many of the HRC CS plans (TR1 2 HRC CS 90, TR1 3 HRC CS 90, TR1 1 HRC CS 95, TR2 1 HRC CS 95, TR1 2 HRC CS 95, TR2 2 HRC CS 95, TR2 3 HRC CS 95) and also outperforms TR2 3 HRC.
+
+- **TR2 3 HRC** is cheaper, shorter and better than its own CS 95 variant, and is also better than all the CS plans that list it as a comparison.
+
+- Many other plans (e.g., TR1 1 HRC, TR2 1 HRC, TR1 3 HRC CS 90) have the same number of tasks or costs as the core plans but do not beat them in overall quality.
+
+**Key values**
+- TR1 3 HRC makespan: 26.94, tasks: 12, cost: [not specified]
+- TR2 3 HRC CS 95 makespan: 42.99, tasks: 16, cost: 4.00
+
+This concise version preserves all the essential comparative relationships among the plans while using plain language and reducing repetition.",Replaced repetitive comparisons with concise statements; shortened overall length.,gpt-oss:20b
+pair_75,"Plan ""TR2 3 HRC"" is the best choice. It costs less, finishes faster, uses fewer tasks, and delivers a shorter, higher‑quality plan than ""TR1 1 HRC CS 90"". Its makespan (≈28.99) beats the 39.97 of ""TR1 1 HRC CS 90"" and its task count (12) is lower than 14. TR2 3 HRC also outperforms TR2 2 HRC CS 90 and TR2 2 HRC CS 95, being cheaper, shorter, faster and overall better. All other plans share the same number of tasks as TR2 3 HRC but do not match its combination of cost, makespan, and task count.","Removed repetitive comparisons and detailed quality value statements. Simplified language to plain statements. Shortened length by summarizing key relationships between plans. Kept core meaning that TR2 3 HRC is cheaper, shorter, faster, better, with better makespan, task count, cost than TR1 1 HRC CS 90 and compared with other similar plans.",gpt-oss:20b
+pair_76,"TR2‑3 HRC has the same cost and number of tasks as TR2‑1 HRC CS 90, but it runs faster. Its makespan is 28.99, better than TR2‑1’s 32.92, indicating higher quality. TR2‑3 HRC is also quicker than TR2‑2 HRC CS 90. TR2‑2’s makespan lies between the two and is better than TR2‑1’s, but TR2‑3 HRC still outperforms it.","Simplified language, removed redundant phrases, shortened sentence structure, kept key comparisons of cost, tasks, makespan, and quality relationships.",gpt-oss:20b
+pair_77,"TR2 3 HRC is cheaper, faster, shorter and overall better than TR1 2 HRC CS 90. It uses 12 tasks, has a makespan of 28.99, and costs less than the 3.0 of TR1 2 HRC CS 90. TR2 3 HRC outperforms TR2 1 HRC CS 90, TR2 2 HRC CS 90, TR2 1 HRC CS 95, and TR2 2 HRC CS 95 on cost, speed and length. It is also better than TR1 3 HRC CS 90, TR2 1 HRC CS 95, and TR2 2 HRC CS 95. The plan has the same number of tasks as TR1 1 HRC, TR1 2 HRC, TR2 1 HRC, TR2 2 HRC and TR1 3 HRC. TR1 1 HRC CS 90 is cheaper (and shorter, faster, better) than TR1 3 HRC CS 90, TR2 1 HRC CS 95, and TR1 2 HRC CS 90, and is also cheaper than TR1 2 HRC and TR2 2 HRC. All cost equalities are noted – for instance, TR2 3 HRC cost equals TR1 1 HRC cost, TR2 1 HRC cost, TR1 2 HRC cost, among others. All other numeric values and comparisons are retained as in the original ontology.","Simplified the narrative to fewer sentences, used plain language, removed redundant statements while preserving all comparisons and key numeric values.",gpt-oss:20b
+pair_78,"Plan TR2 3 HRC has the same cost and number of tasks as plan TR2 2 HRC CS 90, but it runs faster. Its makespan is 28.986 units, better than 30.953 for the other plan. Cost and task counts are equal for both plans.","Rephrased the ontology-based description using simpler, more concise language, removed redundant structure, and kept all key facts: the two plans have equal cost and task count, but the TR2 3 HRC plan is faster with a shorter makespan (28.986…) compared to 30.953 for TR2 2 HRC CS 90. The narrative is shorter and clearer while preserving semantics.",gpt-oss:20b
+pair_79,"- **TR2 3 HRC** is the best plan: it’s cheaper, shorter, faster, and overall better than every other plan listed (e.g., TR1 3 HRC CS 90, TR1 2 HRC CS 90, TR2 1 HRC CS 90, TR2 2 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 95, TR2 3 HRC CS 95).
+- It has the **best makespan** (28.99) compared to TR1 3 HRC CS 90 (43.91) and all other variations.
+- It performs **12 tasks**, fewer than the 15 tasks in TR1 3 HRC CS 90.
+- Its **cost** is lower than the 3.0 of TR1 3 HRC CS 90.
+- It is considered a **TypicalPlan**.
+- **TR1 1 HRC CS 90** is also an excellent plan: it’s cheaper, faster, shorter, and better than many alternatives (TR1 2 HRC CS 90, TR2 1 HRC CS 95, TR1 3 HRC CS 90, etc.).
+- It shares the same number of tasks and cost as TR2 3 HRC.
+- The makespan of TR1 1 HRC CS 90 is lower than TR1 3 HRC CS 90.
+- TR1 3 HRC CS 90’s makespan is classified as an **AtypicalPlanQualityValue**.","Simplified language, removed redundant phrases, used concise bullet points, retained all comparative relations and key metrics.",gpt-oss:20b
+pair_80,"Plan TR2 3 HRC costs the same and has the same number of tasks as TR2 3 HRC CS 90.  However, it runs slower: its makespan is 28.986 min versus 28.937 min for the CS 90 variant, so its quality is poorer.  Even faster is TR2 2 HRC, whose makespan is better than both plans.","Simplified wording, omitted redundant ontology descriptors, kept key comparisons of cost, task count, and makespan values, and summarized relative speeds.",gpt-oss:20b
+pair_81,"TR2 3 HRC is cheaper, faster, shorter and better than all earlier plans like TR1 1 HRC CS 95, TR2 1 HRC CS 90, etc. It has the best makespan (28.99) and fewer tasks (12) than others. TR1 2 HRC CS 90 is cheaper, faster, shorter and better than many CS 95 plans and ties with TR2 3 HRC on cost and tasks. TR1 3 HRC CS 90 is cheapest, fastest, shortest and best among CS 90 and 95 plans, matching the performance of TR2 3 HRC. All TR1 1 HRC plans are cheaper, faster, shorter, and better than their CS 95 counterparts. The “TypicalPlan” quality applies to TR2 3 HRC and most TR1 plans, while the “AtypicalPlanQualityValue” tags the older CS 95 plans.","Simplified verbs, removed repeated comparisons, consolidated statements, omitted numeric details, used plain language, retained meaning of comparisons.",gpt-oss:20b
+pair_82,"Plan TR2 3 HRC is the best overall among the options listed. It is cheaper, shorter, faster, and has a better quality metric than the plan TR2 1 HRC CS 95, as well as many others like TR1 2 HRC CS 90, TR2 2 HRC CS 95, and TR1 3 HRC CS 90.
+
+**Key numbers** – TR2 3 HRC finishes in 28.99 units of time, uses 12 tasks and costs the same as plan TR1 1 HRC. In contrast, TR2 1 HRC CS 95 takes 40.95 units, uses 15 tasks, and costs 3.0 units.
+
+TR2 3 HRC’s performance is matched in cost and number of tasks by plans such as TR1 1 HRC, TR1 2 HRC, TR2 2 HRC, and TR1 3 HRC. Many of these competitors are outperformed by TR2 3 HRC in every metric, making it the top choice.  ","Simplified the text by summarizing comparisons instead of listing each pairwise relationship. Removed repetitive statements and technical classification labels. Replaced complex phrases like ""has better quality value"" with clearer language like ""outperforms"" or ""is better than"". Condensed numeric data into a concise comparison of key metrics (makespan, tasks, cost). The resulting paragraph is shorter, easier to understand, and retains all essential semantic content such as superiority of 'TR2 3 HRC' over numerous other plans and its equalities with certain plans.",gpt-oss:20b
+pair_83,"TR2 3 HRC is the overall best plan. It is cheaper, shorter, faster and has higher quality than all TR1‑HRC variants (CS 90 and CS 95) and all other TR2‑HRC plans considered. It shares the same cost and number of tasks as TR1 1 HRC, but outperforms it in speed and quality. TR2 3 HRC has 12 tasks, a makespan of 28.99 units and is classified as a typical plan. In contrast, TR1 2 HRC CS 95 (the worst performer) has 16 tasks, a makespan of 43.99 units and a cost of 4.0, and is labeled atypical. All TR1 3 HRC CS 90 plans are cheaper, shorter, faster and better than TR1 2 HRC CS 95, but still behind TR2 3 HRC.","Condensed numerous pairwise comparisons into grouped summary, removed repetitive statements, simplified language, preserved key quantitative facts and relative rankings among plans.",gpt-oss:20b
+pair_84,"**TR2 3 HRC is the overall best plan.
+
+- **Cheaper, shorter, faster, fewer tasks** than TR2 2 HRC CS 95.
+  - Makespan: 28.99 units vs 36.99 units.
+  - Tasks: 12 vs 14.
+  - Cost: equivalent to many plans (e.g., TR1 1 HRC) and cheaper than the 2.0 cost of TR2 2 HRC CS 95.
+- It also outperforms TR2 1 HRC CS 90 and TR2 2 HRC CS 90 in speed.
+- TR1 1 HRC has the same cost and task count as TR2 3 HRC but is slower, so TR2 3 HRC is still the better overall plan.*","Simplified the language, removed redundant comparisons, shortened the overall text while preserving key comparison facts.",gpt-oss:20b
+pair_85,"Plan **TR2 3 HRC** is the best overall. It is cheaper, shorter, faster, and of higher quality than many other plans such as TR1 3 HRC CS 95, TR2 1 HRC CS 90/95, TR2 2 HRC CS 90/95, TR1 2 HRC CS 90/95, and others. Its makespan (about 29) and number of tasks (12) are better than the 48‑makepan and 17 tasks of TR1 3 HRC CS 95. TR2 3 HRC shares the same cost and task count as plan TR1 1 HRC and both are classified as *TypicalPlan*. Other plans (such as TR1 1 HRC CS 90, TR1 2 HRC, etc.) also match TR2 3 HRC in cost or task count, but none of them outperform TR2 3 HRC in speed, length, or overall quality.","Simplified and shortened the narrative by summarizing key comparisons and equivalences, keeping all core semantic information. Used clearer, more concise language and removed repetitive statements while retaining meaning about cost, makespan, task count, speed, and quality relations between plans. Ensured classification and equivalence relationships were preserved.",gpt-oss:20b
+pair_86,"**Key facts about the plans**
+
+- **TR2 3 HRC** is the cheapest, shortest, fastest and best plan among all listed. It outperforms TR2 3 HRC CS 95, TR1 1 HRC CS 90, and TR1 2 HRC CS 90.
+- TR2 3 HRC shares the same number of tasks as the following plans: TR1 2 HRC, TR1 3 HRC, TR2 1 HRC, TR2 2 HRC, TR1 1 HRC, and TR2 3 HRC CS 95.
+- **TR1 2 HRC CS 90** is cheaper, shorter, better, and faster than TR1 1 HRC CS 95, TR1 2 HRC CS 95, and TR2 3 HRC CS 95, and it is also better than TR1 1 HRC CS 90.
+- **TR1 1 HRC CS 90** is cheaper, shorter, faster, and better than TR1 2 HRC CS 90, TR1 3 HRC CS 90, TR1 1 HRC CS 95, TR1 2 HRC CS 95, TR2 1 HRC CS 95, and TR2 3 HRC CS 95.
+- All the mentioned plans have equivalent quality for number of tasks or cost where noted (e.g., TR1 1 HRC cost ≈ TR2 3 HRC cost). 
+- Makespan values: TR2 3 HRC makespan = 28.99, TR2 3 HRC CS 95 makespan = 42.99.
+- Task counts: TR2 3 HRC = 12, TR2 3 HRC CS 95 = 16.
+- Cost values: TR2 3 HRC cost is unlisted but considered typical, while TR2 3 HRC CS 95 cost = 4.
+
+These points capture all the comparative and equivalence relationships from the original narrative in a concise, reader‑friendly format.","Rewrote in simple, concise language, removed redundant phrasing, merged repeated statements, shortened list while preserving all cost, time, and quality relationships, kept equivalence and same‑task claims.",gpt-oss:20b
+pair_87,"Plan TR1 1 HRC CS 90 is overall worse than plan TR2 1 HRC CS 90—it costs more, takes longer, runs slower, and its makespan is larger (39.97 vs. 32.92). It also has more tasks (14 vs. 12). The two plans share the same cost as TR2 2 HRC CS 95, though TR1 1 HRC CS 90 has more tasks than that plan. The number‑of‑tasks metric for several other plans equals that of TR2 1 HRC CS 90, while TR2 2 HRC CS 95 has a higher number of tasks than TR2 1 HRC CS 90. All cost comparisons are equal except for TR1 1 HRC CS 90, which pays 2.0 when TR2 1 HRC CS 90 has no listed cost. Overall, TR1 1 HRC CS 90 performs worse in time, task count, and cost compared to the other plans, especially TR2 1 HRC CS 90 and TR2 2 HRC CS 95.","Simplified language, removed repetitive statements, shortened the narrative while preserving all key comparisons among plans.",gpt-oss:20b
+pair_88,"Plan TR1 1 HRC CS 90 is cheaper, faster, shorter, and overall better than plan TR1 2 HRC CS 90. It finishes in 39.97 time units, uses 14 tasks, and costs 2.0, versus 40.97 time, 15 tasks, and 3.0 for TR1 2. TR1 1 is also cheaper, shorter, and better than TR1 3 HRC CS 90 and TR2 1 HRC CS 95, and it is faster than TR2 1. TR1 1 shares the same cost and task count as TR2 2 HRC CS 95 (both 2.0 and 14 tasks). TR2 2 uses fewer tasks than TR1 2, and TR1 1 spends less than TR1 3, TR2 1, and TR2 2. Plans TR1 3, TR2 1, and TR2 2 all have the same cost as TR1 2.","Rephrased the long, jargon‑heavy ontology statements into concise, everyday English sentences, removed explicit references to quality values and ontology names, and reordered facts to follow a logical narrative while preserving all comparative relationships among the plans.",gpt-oss:20b
+pair_89,"TR1 1 HRC CS 90 is the least desirable plan. It costs more, takes longer to finish, uses more tasks, and runs slower than almost every other option. For example, compared with TR2 2 HRC CS 90 it has a higher price (2.0 versus none), a longer makespan (39.97 vs 30.95), and two extra tasks (14 vs 12). It is also slower than TR2 1 HRC CS 90 and TR2 2 HRC CS 95. In contrast, TR1 1 HRC (without the CS 90) has the same cost and task count as TR2 2 HRC CS 90, showing that the CS 90 addition makes the plan worse. Many other plans (TR1 1 HRC, TR2 1 HRC, TR1 2 HRC, TR2 2 HRC, TR1 3 HRC, TR2 3 HRC, TR2 1 HRC CS 90, TR2 3 HRC CS 90) share similar or slightly better metrics with TR1 1 HRC CS 90, but none match the efficiency of TR2 2 HRC CS 90.
+",Simplified comparisons into concise list; removed redundant statements; focused on key metrics and relative standings; used plain language; shortened text by summarizing repeated patterns.,gpt-oss:20b
+pair_90,"Plan TR1 1 HRC CS 90 is cheaper, faster, shorter, and better than plan TR1 3 HRC CS 90. It completes in 39.97 units (vs. 43.91 for TR1 3), uses 14 tasks (vs. 15), and costs 2 (vs. 3). TR1 1 is faster than TR1 2 HRC CS 90, TR2 1 HRC CS 95, and TR2 3 HRC CS 95, and is a better plan than these as well. It is cheaper and shorter than both TR1 2 and TR2 1, and has the same cost and task count as TR2 2 HRC CS 95. TE Plan TR1 1 is classified as TypicalPlan.","Simplified terminology (e.g., ""cheaper"" instead of ""has cheaper plan than""), removed repetitive ontology phrases, condensed comparative statements, and used plain sentences to convey all key comparisons and numeric values.",gpt-oss:20b
+pair_91,"Plan TR1‑1‑HRC‑CS90 is worse than PLANS
+  – TR2‑3‑HRC‑CS90 (more expensive, longer, slower, higher makespan, more tasks).  
+
+  – TR2‑2‑HRC‑CS95 (same cost and task count).  
+
+All other plans compared are either more expensive, longer, or slower than TR1‑1‑HRC‑CS90, or have the same task count or cost as TR2‑3‑HRC‑CS90.  
+
+Key numbers: 
+  • TR1‑1‑HRC‑CS90 makespan = 39.97 units (worse than TR2‑3‑HRC‑CS90’s 28.94).  
+  • TR1‑1‑HRC‑CS90 tasks = 14 (worse than TR2‑3‑HRC‑CS90’s 12).  
+  • TR1‑1‑HRC‑CS90 cost = 2.0 (higher than TR2‑2‑HRC‑CS95 and TR2‑3‑HRC‑CS90).","Removed many redundant and repetitive comparisons, shortened the text, used plain language while preserving that TR1 1 HRC CS 90 is the worst plan compared to TR2 3 HRC CS 90 and several others. Maintained key metrics (makespan, cost, number of tasks) and equivalences.",gpt-oss:20b
+pair_92,"TR1 1 HRC CS 90 is the overall best plan.  It costs 2.0, has 14 tasks, and a makespan of 39.97, all lower than TR1 1 HRC CS 95 (cost 4.0, 16 tasks, 45.91) and better than every other plan.  It is cheaper, shorter, faster and better than TR1 2 HRC CS 90, TR1 3 HRC CS 90, TR2 1 HRC CS 95, TR1 2 HRC CS 95 and TR2 3 HRC CS 95.  The plan is classified as TypicalPlan; its metrics are TypicalPlanQualityValue while the competing plans are mostly AtypicalPlanQualityValue.  TR1 3 HRC CS 90 is a cheaper, shorter, faster and better plan than TR1 1 HRC CS 95.  TR2 1 HRC CS 95, TR2 2 HRC CS 95, and TR2 3 HRC CS 95 have higher costs or worse metrics compared to TR1 1 HRC CS 90.","Rewrote the long, repetitive comparisons into a concise summary that highlights TR1 1 HRC CS 90 as the cheapest, fastest, shortest, and best plan; omitted redundant statements, kept only key metrics (makespan, tasks, cost) and their comparisons, and preserved classification information.",gpt-oss:20b
+pair_93,"The plan ""TR1 1 HRC CS 90"" is cheaper, shorter, faster and overall better than ""TR2 1 HRC CS 95"". Its makespan (39.97) is better than ""TR2 1 HRC CS 95"" (40.95). It has fewer tasks – 14 vs 15 – and a lower cost – 2 vs 3.
+
+Compared with the other ""TR1"" plans, ""TR1 1 HRC CS 90"" is cheaper, shorter, faster and better than both ""TR1 2 HRC CS 90"" and ""TR1 3 HRC CS 90"".
+
+It shares the same cost and same number of tasks with ""TR2 2 HRC CS 95"". ""TR1 1 HRC CS 90"" is classified as a TypicalPlan.
+
+The plan ""TR2 1 HRC CS 95"" (15 tasks, cost 3) is classified as AtypicalPlanQualityValue. Its number of tasks is higher than that of ""TR1 1 HRC CS 90"" but equal to that of ""TR1 3 HRC CS 90"". Its cost is higher than ""TR1 1 HRC CS 90"" but equal to that of ""TR1 2 HRC CS 90"" and ""TR1 3 HRC CS 90"".
+
+""TR2 2 HRC CS 95"" costs the same as ""TR1 1 HRC CS 90"" and has the same number of tasks. Its cost is better than ""TR2 1 HRC CS 95"" (3 versus 2).","Simplified wording, removed repeated clauses, condensed the comparisons, used plain English, retained all relative comparisons and numeric values.",gpt-oss:20b
+pair_94,"Plan TR1 1 HRC CS 90 is the best overall: it is cheaper (2.0), has fewer tasks (14), makes the job faster (39.97 time units), and is judged better than any of the other plans listed. It is also shorter and faster than plans TR1 2 HRC CS 90, TR1 3 HRC CS 90, TR2 3 HRC CS 95, TR1 2 HRC CS 95, TR1 1 HRC CS 95, and TR2 1 HRC CS 95.  It shares the same cost and number of tasks with plan TR2 2 HRC CS 95, but still outperforms them in terms of makespan and overall quality.  The other plans are either less economical, longer, slower, or lower quality when compared to TR1 1 HRC CS 90.","Simplified language; removed redundant comparisons; condensed metrics; kept key relationships (cheaper, shorter, faster, better, same cost/task with TR2 2 HRC CS 95). Shortened from many sentences to one concise paragraph.",gpt-oss:20b
+pair_95,"Plan ""TR1 1 HRC CS 90"" costs the same as and has the same number of tasks as plan ""TR2 2 HRC CS 95"", but it takes longer. Its makespan is 39.97 units, which is worse than the 36.99 units of the other plan.","Replaced long, technical comparisons with direct, simple comparisons; removed redundant phrases such as “has quality value”; combined multiple sentences into one concise statement; used specific numeric values for clarity.",gpt-oss:20b
+pair_96,"Plan TR1 1 HRC CS 90 is the best overall: it is cheaper, shorter, faster, and better than all other plans listed. Compared to the near alternatives:
+- TR1 2 HRC CS 90 is cheaper than TR1 3 HRC CS 95, but it is longer, slower, and less good.
+- TR1 3 HRC CS 90 is cheaper than TR1 2 HRC CS 95 and TR2 3 HRC CS 95, and it is shorter and faster than those.
+- TR1 1 HRC CS 95, TR2 1 HRC CS 95, TR1 2 HRC CS 95, and TR2 3 HRC CS 95 are all more expensive, longer, slower, and poorer than TR1 1 HRC CS 90.
+
+Key metrics for the best plan:
+- Makespan: 39.967 (typical quality)
+- Number of tasks: 14 (typical quality)
+- Cost: 2.0 (typical quality)
+
+These values are better (lower or better quality) than the corresponding values for TR1 3 HRC CS 95, which has a makespan of 47.956, 17 tasks, and a cost of 5.0, classified as atypical quality.","Simplified language, removed redundant repeat comparisons, shortened text to key comparisons, retained plan quality ordering and numeric data.",gpt-oss:20b
+pair_97,"Plan TR1 1 HRC CS 90 is cheaper, shorter, faster and better than plan TR2 3 HRC CS 95. It is also cheaper than TR1 2 HRC CS 90, which is cheaper, shorter and better than TR1 1 HRC CS 95 and TR1 2 HRC CS 95, and cheaper than TR1 3 HRC CS 90. Plan TR1 3 HRC CS 90 is cheaper and shorter than TR2 3 HRC CS 95. TR1 2 HRC CS 90 is cheaper, shorter and better than TR2 3 HRC CS 95. The makespan of TR1 1 HRC CS 90 (≈39.97) is smaller than that of TR2 3 HRC CS 95 (≈42.99). TR1 1 HRC CS 90 has 14 tasks and costs 2.0, both less than TR2 3 HRC CS 95’s 16 tasks and cost 4.0. All metrics for TR1 1 HRC CS 90 are typical, whereas TR2 3 HRC CS 95 is atypical. TR1 1 HRC CS 90 shares the same cost and number of tasks with TR2 2 HRC CS 95 and is classified as a TypicalPlan.","Simplified language, removed repetitive details, kept key comparisons, included makespan, tasks, cost, and classification. Shortened text to essential points, preserved meaning.",gpt-oss:20b
+pair_98,"Plan **TR2 1 HRC CS 90** is better, cheaper, faster, and shorter than plan **TR1 2 HRC CS 90** and a set of other similar plans (TR1 3 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 95). Its makespan is 32.92 units compared to 40.97 for TR1 2 HRC CS 90, it needs 12 tasks versus 15, and its cost equals the baseline cost of TR1 1 HRC. All plans with the ""HRC"" prefix share the same number of tasks as TR2 1 HRC CS 90. Plan TR1 1 HRC CS 90 is also cheaper, shorter, better, and faster than many of the same options, and it shares cost and task equality with several other variants. Overall, TR2 1 HRC CS 90 stands out as the most efficient plan among the compared set.","Removed redundant comparative statements, shortened repeated equivalence clauses, simplified numeric presentations, and condensed description of plan relationships.",gpt-oss:20b
+pair_99,"Plan 'TR2 1 HRC CS 90' costs the same as 'TR2 2 HRC CS 90' and has the same number of tasks, but is slower. Its makespan (32.92) is worse than 'TR2 2 HRC CS 90's makespan (30.95). All other metrics are equal.","Simplified language, shortened sentences, removed redundant phrasing, retained all comparative facts.",gpt-oss:20b
+pair_100,"Plan **TR2 1 HRC CS 90** is the best overall. It is cheaper, shorter, faster, and has fewer tasks than several other plans such as **TR1 3 HRC CS 90**, **TR1 2 HRC CS 90**, **TR2 1 HRC CS 95**, **TR2 2 HRC CS 95**, and **TR2 3 HRC CS 95**.
+
+Its duration (makespan) is 32.92, lower than the 43.91 of **TR1 3 HRC CS 90**. It contains 12 tasks compared with 15 in that plan. Cost is also better (the value is empty, indicating it is cheaper than the 3.0 cost of **TR1 3 HRC CS 90**).
+
+This plan is classified as **TypicalPlan**. The makespan of **TR1 3 HRC CS 90** is tagged as **AtypicalPlanQualityValue**.","Simplified terminology, removed redundant comparisons, used concise sentences. Retained key performance metrics and plan classification. Eliminated repetitive statements about equivalence and same number of tasks.",gpt-oss:20b
+pair_101,"Plan TR2 1 HRC CS 90 has the same cost and the same number of tasks as plan TR2 3 HRC CS 90, but it runs slower. Its makespan is 32.922 minutes, worse than the 28.937 minutes of TR2 3 HRC CS 90. The cost is equal for both plans. TR2 1 HRC CS 90 is slower than plans TR2 2 HRC, TR2 3 HRC, and TR2 2 HRC CS 90. For makespan, the order from best to worst is: TR2 3 HRC CS 90, TR2 3 HRC, TR2 2 HRC CS 90, TR2 2 HRC, and finally TR2 1 HRC CS 90.","Simplified and condensed the narrative, removed repetitive statements about quality values, used plain English, and provided a concise comparison of plans with key metrics.
+
+Narrative",gpt-oss:20b
+pair_102,"**Key Findings**
+- **TR2 1 HRC CS 90** is the overall best plan: it costs less, takes less time, uses fewer tasks, and has the highest quality compared to every other plan (TR1 1 HRC CS 90, TR1 2 HRC CS 90, TR1 3 HRC CS 90, TR2 1 HRC CS 95, TR1 2 HRC CS 95, TR2 2 HRC CS 95, and TR2 3 HRC CS 95).
+- **TR1 1 HRC CS 90** is also good—cheaper than the 95‑cost plans and shorter and faster than their 95 counterparts.
+- The 95‑cost plans are all more expensive, take longer, and use more tasks than the 90‑cost plans.
+- All “90” plans share the same cost value and the same number of tasks; they differ only in speed and quality.
+- The “CS 90” plans are classified as typical plans, while the 95‑cost plans are atypical.
+- The makespan of TR2 1 HRC CS 90 is 32.92, which is better (lower) than the 45.91 of TR1 1 HRC CS 95.
+- The number of tasks for TR2 1 HRC CS 90 is 12, better (lower) than 16 in TR1 1 HRC CS 95.
+- Costs: TR1 1 HRC CS 95 costs 4.0, while TR2 1 HRC CS 90 has the typical cost value (no numeric value provided but considered better).","Simplified language, removed redundant comparisons, shortened repetitive statements while preserving key relationships like cost, time, and tasks among plans.",gpt-oss:20b
+pair_103,"The plan **TR2‑1‑HRC‑CS‑90** is the best choice. It has a makespan of **32.92**, fewer tasks (**12**), and a lower cost (no cost recorded), so it is cheaper, shorter, and faster than **TR2‑1‑HRC‑CS‑95**. Across all other plans—**TR1‑1‑HRC‑CS‑90**, **TR1‑2‑HRC‑CS‑90**, **TR1‑3‑HRC‑CS‑90**, and **TR2‑2‑HRC‑CS‑95**—TR2‑1‑HRC‑CS‑90 remains cheaper, shorter, faster, and overall better. It shares the same number of tasks and cost level as **TR1‑1‑HRC** and is classified as a TypicalPlan.
+
+*Facts about the metrics*: 
+- **TR2‑1‑HRC‑CS‑95**: makespan **40.95**, 15 tasks, cost 3.0.
+- **TR1‑1‑HRC‑CS‑90**: makespan better than TR2‑1‑HRC‑CS‑95, and it too is a TypicalPlan.
+- TR2‑1‑HRC‑CS‑90’s advantages over many other plans are expressed in the same way: it wins on makespan, task count, and cost whenever it is compared.''","Shortened and simplified the original ontology-based text by removing technical phraseology and repetitive comparisons, condensing data into clear statements that preserve all semantic relationships among the plans. Updated the narrative to use easier language and fewer sentences, while keeping details about makespan, tasks, cost, and plan quality.",gpt-oss:20b
+pair_104,"**Best Plan** – The plan **TR2 1 HRC CS 90** wins on all fronts. It is cheaper, shorter, faster and overall better than the other plans (TR1 1 HRC CS 95, TR1 2 HRC CS 95, TR1 3 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 95, TR2 3 HRC CS 95). Its makespan is 32.92, its number of tasks is 12, and it is tagged as a *TypicalPlan* with *TypicalPlanQualityValue*.
+
+**Other Plans** – The remaining plans vary in cost, makespan and task count.
+- *TR1 2 HRC CS 95* has a higher cost (4), longer makespan (43.99) and more tasks (16). It is labeled *AtypicalPlanQualityValue*.
+- *TR1 1 HRC CS 90* and *TR1 3 HRC CS 90* are cheaper than *TR1 2 HRC CS 95* but are still less optimal than *TR2 1 HRC CS 90*.
+- *TR2 1 HRC CS 95*, *TR2 2 HRC CS 95*, and *TR2 3 HRC CS 95* have higher cost, longer makespan, and similar or higher task counts.
+
+**Task Count Equivalence** – Many plans have the same number of tasks. For instance, *TR2 1 HRC* (without CS) has the same task count as *TR2 1 HRC CS 90*, *TR1 2 HRC*, *TR2 2 HRC*, *TR1 3 HRC*, and *TR2 3 HRC*. Plans *TR2 2 HRC CS 90* and *TR2 3 HRC CS 90* also match that task count.
+
+**Cost & Quality Comparisons** – Across the board, *TR2 1 HRC CS 90* achieves the best cost and has a *TypicalPlanQualityValue*. It outperforms *TR1 1 HRC CS 90* and *TR1 2 HRC CS 90*, which in turn are better than the more expensive *TR1 2 HRC CS 95*.
+
+**Key Takeaway** – Choose **TR2 1 HRC CS 90** for the lowest cost, shortest duration, and minimal task count—the best overall plan among all the alternatives presented.","Used simpler language, removed repetitive comparisons, kept main facts and relationships. Summarized key points: TR2 1 HRC CS90 is the best plan: lowest cost, smallest makespan, fewest tasks; better than many alternate plans. Others have similar or higher cost and longer makespan. Notes on typical vs atypical classification are preserved.",gpt-oss:20b
+pair_105,"TR2 1 HRC CS 90 beats TR2 2 HRC CS 95 on every measure: it is cheaper, faster, shorter, uses fewer tasks, and finishes sooner. Its makespan is 32.92 (vs 36.99), it uses 12 tasks (vs 14), and its cost is lower than TR2 2 HRC CS 95. Moreover, TR2 1 HRC CS 90 shares the same cost and number of tasks with TR1 1 HRC, and all plans labeled **TR1 HRC** or **TR2 HRC** have the same cost and task count as TR2 1 HRC CS 90. Every TR1 HRC plan and every TR2 HRC plan is cheaper, shorter, and better than TR2 2 HRC CS 95. In short, TR2 1 HRC CS 90 is the best choice among the listed options.","Rephrased in plain language, shortened to key comparisons, omitted redundant equivalent quality relations.",gpt-oss:20b
+pair_106,"Plan TR2 1 HRC CS 90 is the best. It is cheaper, shorter, faster, and overall better than TR2 1 HRC CS 95, TR1 2 HRC CS 95, TR2 2 HRC CS 95, and TR2 3 HRC CS 95. Its makespan (32.92) is less than TR1 3 HRC CS 95’s (47.95); it uses 12 tasks versus 17, and its cost is lower. TR1 3 HRC CS 95 has a makespan of 47.95, 17 tasks, and a cost of 5, making it the worst among the compared plans. All other comparisons conclude that TR2 1 HRC CS 90 outperforms the remaining plans on cost, task count, makespan, speed, and overall quality.","Simplified language, removed redundant statements, shortened the text while preserving all comparative facts about the top plans.
+",gpt-oss:20b
+pair_107,"Plan *TR2 1 HRC CS 90* is the best overall. It is cheaper, shorter, faster, and better quality than all the other plans listed: *TR1 3 HRC CS 90*, *TR1 1 HRC CS 95*, *TR2 1 HRC CS 95*, *TR1 2 HRC CS 95*, and *TR2 3 HRC CS 95*. It also has fewer tasks, a lower cost (the other plans have a cost value of 4.0), and a shorter makespan (32.92 vs. 42.99 for the worse plan). All comparable attributes of *TR2 1 HRC CS 90* beat the rest, so it is the preferred choice.","I shortened the original by removing repeated clauses, simplified the language, and grouped comparisons by attribute (cost, time, tasks, quality). The essential meaning—showing that plan ""TR2 1 HRC CS 90"" is the best in cost, duration, speed, quality, and tasks, and that it outperforms the other plans—is preserved.",gpt-oss:20b
+pair_108,"TR1 2 HRC CS 90 is cheaper, longer, slower, and less efficient than many other plans, especially TR2 2 HRC CS 90. Its makespan is 40.97, vs 30.95 for TR2 2 HRC CS 90. It has 15 tasks compared to 12, and a cost of 3.0 versus the zero cost of TR2 2 HRC CS 90.
+
+TR1 2 HRC CS 90 shares the same cost and task count with TR1 3 HRC CS 90, but its makespan is longer. TR2 1 HRC CS 95 also has the same cost and number of tasks as TR1 2 HRC CS 90, while TR1 1 HRC shares the same cost as TR2 2 HRC CS 90.","Simplified language, condensed sentences, removed repetitive comparisons, grouped key metrics, noted equivalences.",gpt-oss:20b
+pair_109,"Plan ""TR1 2 HRC CS 90"" is just as costly as plan ""TR1 3 HRC CS 90"" and uses the same number of tasks. It finishes faster, with a makespan of 40.97, compared to 43.91 for ""TR1 3 HRC CS 90"". Overall, ""TR1 2 HRC CS 90"" is the better plan and is classified as a TypicalPlan.
+
+Plan ""TR2 3 HRC CS 95"" is slower and less optimal than ""TR1 2 HRC CS 90"", which is both faster and cheaper. ""TR1 3 HRC CS 90"" has an atypical quality value for its makespan.","Simplified language, removed technical property labels and redundant comparisons, shortened text while preserving key comparisons and classification details.",gpt-oss:20b
+pair_110,"Plan ""TR1 2 HRC CS 90"" is worse than plan ""TR2 3 HRC CS 90"" in every way: it costs more (3.0 versus no cost listed for TR2 3 HRC CS 90), takes longer (40.97 vs 28.94 time units), and has more tasks (15 vs 12).  It also is slower, longer and more expensive than many other HRC and HRC CS 90 plans.  
+
+The two plans ""TR1 2 HRC CS 90"" and ""TR1 3 HRC CS 90"" share the same cost and the same number of tasks.  Several other plans are tied with TR1 2 HRC CS 90 in cost (e.g., TR2 1 HRC CS 95) or in number of tasks (e.g., TR1 1 HRC, TR2 3 HRC CS 90).  All of the equivalence and “same cost/number of tasks” statements relate these plans to each other but do not change the fact that TR1 2 HRC CS 90 is overall inferior to TR2 3 HRC CS 90.","Simplified language, significantly shortened, removed redundant comparisons, kept key facts about cost, makespan, number of tasks, and equivalences.",gpt-oss:20b
+pair_111,"Across the six plans, TR1 2 HRC CS 90 comes out on top. It costs 3 credits, runs in 40.97 time units, and uses 15 tasks (TypicalPlan). By contrast, TR1 1 HRC CS 95 costs 4 credits, takes 45.91 units, and needs 16 tasks (AtypicalPlan). Therefore, TR1 2 HRC CS 90 is cheaper, faster, shorter, and better. Plans TR1 3 HRC CS 90 and TR2 3 HRC CS 95 match TR1 2 HRC CS 90 in cost and task count but are slightly slower. Plan TR2 1 HRC CS 95 outperforms TR1 1 HRC CS 95 on all three metrics, yet still falls behind TR1 2 HRC CS 90. All these comparisons are supported by the reported quality values.","Removed redundant sentences, simplified wording, and condensed the narrative into a concise paragraph that preserves all comparative relationships and numeric details about makespan, cost, task count, and plan quality.",gpt-oss:20b
+pair_112,"Plan TR1 2 HRC CS 90 is just as expensive and has the same number of tasks as plan TR2 1 HRC CS 95, but it runs a bit slower. Its makespan is 40.9689, slightly higher than TR2’s 40.9537. Both plans share identical cost and task quality values. TR1 is classified as TypicalPlan, while TR2’s task and cost values are labeled as AtypicalPlanQualityValue.","Simplified language, removed redundant phrasing, shortened the narrative while preserving the key comparisons and numerical values for makespan, cost, and task counts, and retained the classification distinctions.",gpt-oss:20b
+pair_113,"Plan **TR1 2 HRC CS 90** is the best choice. It is cheaper, shorter, faster, uses fewer tasks, has a lower cost, and a shorter makespan (40.97) than plan **TR1 2 HRC CS 95** (43.99 makespan, 16 tasks, cost 4). It is also better than **TR1 1 HRC CS 95** and **TR2 3 HRC CS 95**. 
+
+Plan **TR1 3 HRC CS 90** matches **TR1 2 HRC CS 90** in cost and task count but is not as fast (its makespan is higher). It outperforms **TR1 1 HRC CS 95** and **TR1 2 HRC CS 95** on all quality dimensions. 
+
+All plans share the same qualitative categories: *TypicalPlan* for the best ones, *AtypicalPlanQualityValue* for the poorer ones. Numerical values: 
+- Makespan: 40.97 for **TR1 2 HRC CS 90**, 43.99 for **TR1 2 HRC CS 95**. 
+- Tasks: 15 for **TR1 2 HRC CS 90**, 16 for **TR1 2 HRC CS 95**. 
+- Cost: 3 for **TR1 2 HRC CS 90**, 4 for **TR1 2 HRC CS 95**.","Simplified language to straightforward sentences, removed repetitive phrasing, condensed multiple comparisons into summary statements, kept all numerical and relational facts while shortening the overall text.",gpt-oss:20b
+pair_114,"Plan ‘TR1 2 HRC CS 90’ is overall worse, longer, slower and more expensive than plan ‘TR2 2 HRC CS 95’.
+
+* Makespan: 40.97 > 36.99
+* Tasks: 15 > 14
+* Cost: 3 > 2
+
+Compared with the 1‑stage versions, ‘TR1 2 HRC CS 90’ is slower, longer, cheaper and worse than both ‘TR1 1 HRC CS 90’ and ‘TR2 1 HRC CS 95’.
+
+‘TR1 3 HRC CS 90’ shares the same cost and the same number of tasks as ‘TR1 2 HRC CS 90’.
+
+‘TR2 1 HRC CS 95’ has the same cost and same number of tasks as ‘TR1 2 HRC CS 90’.
+
+‘TR1 1 HRC CS 90’ has the same cost and same number of tasks as ‘TR2 2 HRC CS 95’.
+
+All other quality‑value comparisons follow these patterns.","Used simpler wording, removed repetitive technical phrasing, condensed many comparisons into concise statements while preserving all stated relationships.",gpt-oss:20b
+pair_115,"Plan TR1 2 HRC CS 90 is cheaper, faster, shorter and better than TR1 3 HRC CS 95. It is also faster than TR1 3 HRC CS 90. This plan has a smaller makespan (40.97) and fewer tasks (15) than TR1 3 HRC CS 95 (47.96, 17 tasks) and a lower cost (3) than TR1 3 HRC CS 95 (5). TR1 1 HRC CS 95, TR1 2 HRC CS 95, and TR2 3 HRC CS 95 are all cheaper, shorter and better than TR1 3 HRC CS 95, and are also faster. All three have the same cost (3) and number of tasks (15) as TR1 2 HRC CS 90. The makespans of the “best” plans (TR1 1 HRC CS 95, TR1 2 HRC CS 90, TR2 1 HRC CS 95) are all lower than that of the atypical plan TR1 3 HRC CS 95. All plan quality values for cost, tasks and makespan are marked as typical for the “best” plans and atypical for TR1 3 HRC CS 95.","Replaced long repeated statements with concise comparisons, removed duplicate facts and unnecessary qualifiers, switched from technical phrasing to simpler sentences, shortened overall length while preserving all key relationships among plans (cheapest, fastest, shortest, best, cost, makespan, tasks).",gpt-oss:20b
+pair_116,"Plan TR1‑2 HRC CS 90 beats plan TR2‑3 HRC CS 95 on all fronts: it’s cheaper (3 vs 4), faster (40.97 vs 42.99 time), shorter (15 tasks vs 16), and overall better.   It also outperforms the other similar plans: it’s cheaper, faster, and equal in task count to TR1‑3 HRC CS 90, and beats TR1‑1 and TR1‑2 HRC CS 95 in cost, speed, and quality.   The makespan, task count, and cost of TR1‑2 HRC CS 90 are all classified as “TypicalPlanQualityValue”; TR2‑3 HRC CS 95 has the “AtypicalPlanQualityValue” label.   TR2‑1 HRC CS 95 shares the same cost and number of tasks as TR1‑2 HRC CS 90, while TR1‑1 HRC CS 95 matches the cost and task count of TR2‑3 HRC CS 95, and TR1‑3 HRC CS 90 is cheaper and faster than TR2‑3 HRC CS 95.","Simplified language, removed redundant comparisons, shortened length, kept key comparisons and numerical values, maintained classification info.",gpt-oss:20b
+pair_117,"Plan **TR2 2 HRC CS 90** is the best overall. It is cheaper, shorter, faster, and has fewer tasks (12) than plan **TR1 3 HRC CS 90** (which has 15 tasks). The makespan for TR2 2 HRC CS 90 is 30.95, lower than the 43.91 of TR1 3 HRC CS 90. Compared with every other plan mentioned—**TR1 2 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 95, TR2 3 HRC CS 95, and any variant with the same task count—TR2 2 HRC CS 90 outperforms them in cost, duration, and workload. It also matches many plans in task count but still comes out ahead overall. The plan is classified as a “TypicalPlan” and its makespan value falls under the “AtypicalPlanQualityValue” category.","Rephrased the detailed comparison list into a concise summary that uses simple language, eliminated redundant statements and grouped equivalent comparisons, while preserving all key relationships about cost, time, makespan, task count, and plan classification.",gpt-oss:20b
+pair_118,"Plan ""TR2 2 HRC CS 90"" costs the same as ""TR2 3 HRC CS 90"" and has the same number of tasks, but it takes longer to finish. Its makespan is 30.95, which is worse than the 28.94 of ""TR2 3 HRC CS 90"". It is also slower than the plans ""TR2 2 HRC"" and ""TR2 3 HRC"".","Simplified language, removed redundant quality-value phrases, shortened sentences, preserved comparisons of cost, tasks, speed and makespan across plans.",gpt-oss:20b
+pair_119,"Plan TR2 2 HRC CS 90 is best overall. It is cheaper, shorter, faster and better than the older plan TR1 1 HRC CS 95 and many other variants. Its makespan (30.95) is much lower than TR1 1 HRC CS 95’s (45.91). It has 12 tasks versus 16 for TR1 1 HRC CS 95, and its cost is considered optimal (classified as TypicalPlan). Many other plans—TR1 2 HRC CS 95, TR2 1 HRC CS 95, TR1 3 HRC CS 90, etc.—are dominated by TR2 2 HRC CS 90 on all these measures. Some plans share the same cost or task count as TR2 2 HRC CS 90, but none match its performance on makespan, cost, and task count together. The plan also competes with other “TypicalPlan” variants but remains superior in overall quality.","Simplified language, shortened narrative, retained semantic comparisons, omitted redundant repeated statements, preserved key metrics and classifications.",gpt-oss:20b
+pair_120,"Plan **TR2‑2 HRC CS 90** is the best overall. It costs less, takes less time to finish, has fewer tasks, and has a shorter makespan (30.95 vs. 40.95) than the other plans. It also matches the cost and number of tasks of plan **TR1‑1 HRC** and several others. It is tagged as a TypicalPlan.
+
+Plan **TR1‑1 HRC CS 90** is also very good. It is cheaper and shorter than plans **TR1‑2 HRC CS 90**, **TR1‑3 HRC CS 90**, and **TR2‑1 HRC CS 95**. It is also a TypicalPlan.
+
+Plan **TR2‑1 HRC CS 95** performs the worst: it costs the most, takes the longest, and has the most tasks. Its cost and task count are not equivalent to the better plans, and it is classified as an AtypicalPlanQualityValue.
+
+Many other plans share the same number of tasks or cost with TR2‑2 HRC CS 90, but none of them beat its superior metrics. All comparisons among the listed plans can be seen as grouping into these three categories.","Removed all repetitive statements, replaced long technical phrases with plain English, omitted redundant numeric comparisons where values are obvious, grouped the relationships by plan categories (best, good, worst), kept key facts such as makespan, tasks, cost, and plan classifications, and summarized the equivalences in fewer sentences.",gpt-oss:20b
+pair_121,"Plan **TR2 2 HRC CS 90** is the best overall. It is cheaper, has a shorter duration, runs faster, and is overall better than plan **TR1 2 HRC CS 95** and many other variants such as TR2 1 HRC CS 90, TR2 1 HRC CS 95, TR2 2 HRC CS 95, and TR2 3 HRC CS 95.
+
+Its makespan is about **30.95 units**, noticeably shorter than the **43.99 units** of TR1 2 HRC CS 95, and it completes with only **12 tasks** compared with the **16 tasks** of that plan. The cost of TR2 2 HRC CS 90 is very low, better than TR1 2 HRC CS 95, and its overall quality is classified as *TypicalPlan*.
+
+Other plans with the same number of tasks (e.g., TR2 1 HRC, TR1 2 HRC, TR2 2 HRC, TR1 3 HRC, TR2 3 HRC) share the task count but are generally more expensive or have worse timing, so TR2 2 HRC CS 90 remains the preferred option.","Simplified language, reduced length, preserved comparisons among key plans, removed redundant statements about equivalence, focused on main metrics and classification.",gpt-oss:20b
+pair_122,"Plan TR2 2 HRC CS 90 is better than plan TR2 2 HRC CS 95 – it is cheaper, faster, shorter, has fewer tasks (12 vs 14) and a shorter makespan (30.95 vs 36.99). It shares the same cost and number of tasks as plan TR1 1 HRC, and is also cheaper, shorter and better than plan TR1 1 HRC CS 90. It is faster than plan TR2 1 HRC CS 90.\n\nSeveral other plans (TR1 1 HRC, TR1 2 HRC, TR1 3 HRC, TR2 1 HRC, TR2 2 HRC, TR2 3 HRC, TR2 1 HRC CS 90, TR2 3 HRC CS 90) have identical cost and/or number of tasks as TR2 2 HRC CS 90. All of these plans are cheaper, shorter and better than plan TR2 2 HRC CS 95.\n\nNumeric values:\n• Makespan – TR2 2 HRC CS 90: 30.95; TR2 2 HRC CS 95: 36.99\n• Tasks – TR2 2 HRC CS 90: 12; TR2 2 HRC CS 95: 14\n• Cost – TR2 2 HRC CS 95: 2.0; TR2 2 HRC CS 90: no value but better/equal to all referenced costs.","Removed repetitive statements, consolidated equivalent relationships, condensed comparative sentences, used simpler wording, shortened narrative, retained all semantic comparisons and numeric values.",gpt-oss:20b
+pair_123,"**Central Findings**
+
+- **Plan TR2‑2 HRC CS 90** is the best overall:
+  * Cheaper, faster, and shorter than almost every other plan mentioned.
+  * Has the fewest tasks (12) and the smallest makespan (≈ 31 time units).  
+  * Shares the same cost (zero‑price) with **TR1‑1 HRC**.
+  * Classified as a **TypicalPlan**.
+
+- **Plan TR1‑3 HRC CS 95** shows the opposite trend:
+  * Higher cost (5), longer makespan (~ 48), and more tasks (17).
+  * Classified as an **AtypicalPlanQualityValue**.
+
+- Several other plans (**TR2‑1 HRC**, **TR1‑2 HRC**, **TR2‑2 HRC**, **TR1‑3 HRC**, etc.) have the same number of tasks as TR2‑2 HRC CS 90 but do not match its superior speed, cost, or makespan.
+
+- All comparisons about cost, speed, and quality can be summarized by noting that TR2‑2 HRC CS 90 wins in every metric against the listed alternatives.","Replaced repetitive and complex comparison statements with concise bullet points that capture key relationships. Simplified terminology (e.g., ""cheaper"" instead of ""cheaper plan than and is cheaper plan than ...""), removed duplicate phrasing, and condensed numeric data into a short summary. The narrative now focuses on the main advantages of TR2 2 HRC CS 90 and its relation to TR1 3 HRC CS 95, while maintaining all semantic meanings.",gpt-oss:20b
+pair_124,"TR2 2 HRC CS 90 is the best overall: it costs less, takes fewer tasks, finishes faster, and has a smaller makespan than TR2 3 HRC CS 95, as well as TR1 1 HRC CS 90 and TR1 2 HRC CS 90. Its makespan is 30.95 vs 42.99, it uses 12 tasks vs 16, and its cost is 0 vs 4. It is labelled a *TypicalPlan*.
+
+TR1 1 HRC CS 90 is cheaper and shorter than all other plans in its group (TR1 2 HRC CS 90, TR1 3 HRC CS 90, TR1 1 HRC CS 95, TR2 1 HRC CS 95, TR1 2 HRC CS 95, TR2 3 HRC CS 95). It is also faster and has a better quality value than TR1 2 HRC CS 90. All plans that share the same number of tasks are grouped together, and their costs, tasks, and makespans are marked as *TypicalPlanQualityValue* or *AtypicalPlanQualityValue* accordingly.","Reduced repeated comparative statements to a concise summary. Combined equivalent quality facts into a single statement per metric. Removed redundant identical comparisons and clarified plan classifications. Use simpler language (e.g., 'cheaper' instead of 'cheaper plan'). Shortened overall narrative while keeping all key relationships (e.g., makespan, tasks, cost, speed, length, quality, classification).",gpt-oss:20b
+pair_125,"The plan ""TR1 3 HRC CS 90"" is generally worse than most other plans. It costs more, takes longer, runs slower, and has a worse quality value than ""TR2 3 HRC CS 90"" and other listed options. Its completion time (makespan) is 43.91, compared to 28.94 for ""TR2 3 HRC CS 90"". It also requires 15 tasks, while ""TR2 3 HRC CS 90"" needs only 12. The cost of ""TR1 3 HRC CS 90"" is 3.0, higher than many alternatives. It shares the same cost and task count with the plan ""TR1 2 HRC CS 90"". The plan is tagged as an AtypicalPlan and an AtypicalPlanQualityValue.","Simplified comparisons, removed repetitive details, kept key metrics (makespan, tasks, cost) and classification.",gpt-oss:20b
+pair_126,"Plan ""TR1 3 HRC CS 90"" is cheaper, faster, and shorter than ""TR1 1 HRC CS 95"" and gives a better makespan (43.91 vs 45.91) and fewer tasks (15 vs 16). It has a cost of 3.0 versus 4.0 for ""TR1 1 HRC CS 95"". The plan is also better than ""TR1 2 HRC CS 95"" and ""TR2 3 HRC CS 95"", and has the same cost and number of tasks as ""TR1 2 HRC CS 90"". Compared to other plans: ""TR2 1 HRC CS 95"" shares the same cost and task count as “TR1 3 HRC CS 90”; ""TR1 2 HRC CS 90"" is cheaper, shorter, and better than ""TR1 1 HRC CS 95""; ""TR1 2 HRC CS 95"" has a shorter makespan and is faster than ""TR1 1 HRC CS 95"" but its cost matches that of “TR1 1 HRC CS 95"". All plans are linked by their cost, task count, and makespan, with “TR1 3 HRC CS 90” generally providing the best values among them.","The new narrative simplifies comparisons by using plain sentences, removes repetitive statements, shortens the text, and consolidates all key comparisons into concise bullets while maintaining the original semantics.",gpt-oss:20b
+pair_127,"Plan TR1 3 HRC CS 90 costs the same as plan TR2 1 HRC CS 95 and has the same number of tasks, but it takes longer. Its makespan is 43.91, which is worse than the 40.95 makespan of TR2 1 HRC CS 95. The number of tasks for both plans is equal in quality, and their costs are equal. Plan TR1 3 HRC CS 90 is slower than both TR1 2 HRC CS 90 and TR2 3 HRC CS 95. The makespan of TR1 2 HRC CS 90 is also worse than TR2 1 HRC CS 95, and the makespan of TR2 3 HRC CS 95 is worse than that of TR2 1 HRC CS 95.","Rephrased in plain language, removed repeated phrases, shortened text, kept all comparisons and values.",gpt-oss:20b
+pair_128,"Plan TR1 3 HRC CS 90 is the best option among the listed plans. It finishes in 43.912 time units, uses 15 tasks, and costs 3 units. Compared to TR1 2 HRC CS 95 (43.997 units, 16 tasks, 4 units), it is cheaper, faster, and has fewer tasks. It is also cheaper than TR1 1 HRC CS 95 and TR2 3 HRC CS 95 and is better than TR1 1 HRC CS 95. TR1 3 HRC CS 90 has the same cost and task count as TR1 2 HRC CS 90. Likewise, TR1 2 HRC CS 90 is better than TR1 2 HRC CS 95, being cheaper, faster, and having fewer tasks. The task and cost metrics for TR1 3 HRC CS 90 are each classified as TypicalPlanQualityValue.","Simplified language, removed repetitive comparisons, condensed quantitative details into a concise summary.",gpt-oss:20b
+pair_129,"Plan TR1 3 HRC CS 90 is worse than plan TR2 2 HRC CS 95 – it costs more (3 vs. 2), takes longer (43.91 vs. 36.99 units), has more tasks (15 vs. 14), and runs slower. It is also slower, longer, and overall worse than TR1 1 HRC CS 90. The plan shares its cost and number of tasks with TR1 2 HRC CS 90, and its cost matches that of TR2 1 HRC CS 95. TR1 3 HRC CS 90 is labeled ‘AtypicalPlan’, and its makespan quality is labeled ‘AtypicalPlanQualityValue’.","Simplified the language, removed repetitive comparisons, shortened the text, but kept all essential comparisons and values.",gpt-oss:20b
+pair_130,"Plan **TR1 3 HRC CS 90** is better, cheaper, shorter, and faster than the plan **TR1 3 HRC CS 95**. It also outperforms **TR1 1 HRC CS 95**, **TR1 2 HRC CS 95**, and **TR2 3 HRC CS 95** on all these measures.
+
+Metrics: makespan = 43.91 vs. 47.96, tasks = 15 vs. 17, cost = 3 vs. 5.
+
+**TR1 3 HRC CS 90** shares the same cost and number of tasks as **TR1 2 HRC CS 90** and **TR2 1 HRC CS 95**. All other plans with the same cost or task count as **TR1 3 HRC CS 90** are likewise better in these respects.","Condensed repeated comparative clauses, removed repeated quality value terms, used simple verbs (better, cheaper, shorter, faster), and presented numeric comparisons directly. The narrative now lists only essential plan relationships and metrics.",gpt-oss:20b
+pair_131,"Plan TR1 3 HRC CS 90 is cheaper, shorter, and slower than plan TR2 3 HRC CS 95.
+
+TR1 3 HRC CS 90 has a makespan of 43.91, which is slower (worse quality) than TR2 3 HRC CS 95’s makespan of 42.99.
+
+TR1 3 HRC CS 90 has 15 tasks, one fewer than TR2 3 HRC CS 95’s 16 tasks, giving it better task quality.
+
+The cost of TR1 3 HRC CS 90 is 3, lower than TR2 3 HRC CS 95’s 4, again better quality.
+
+TR1 3 HRC CS 90 outperforms TR1 1 HRC CS 95 and TR1 2 HRC CS 95 in cost, time, and overall quality.
+
+TR1 3 HRC CS 90 shares the same cost and task count with TR1 2 HRC CS 90.
+
+Many plans have equal cost or task counts: TR2 1 HRC CS 95 has the same cost and tasks as TR1 3 HRC CS 90; TR1 1 HRC CS 95 matches TR2 3 HRC CS 95. 
+
+TR1 2 HRC CS 90 is also cheaper, shorter, and better than TR2 3 HRC CS 95, with equal task quality to TR1 3 HRC CS 90 and the same cost as TR1 3 HRC CS 90.","Simplified wording, removed redundant and repeated facts, shortened text, used plain language while keeping all semantic relations.",gpt-oss:20b
+pair_132,"Plan **TR2 3 HRC CS 90** (a TypicalPlan) is the best overall. It is cheaper, shorter, faster, and better than the following plans:
+- TR1 1 HRC CS 95
+- TR1 1 HRC CS 90
+- TR1 2 HRC CS 90
+- TR1 3 HRC CS 90
+- TR2 1 HRC CS 95
+- TR1 2 HRC CS 95
+- TR2 2 HRC CS 95
+- TR2 3 HRC CS 95
+
+Key metrics for TR2 3 HRC CS 90 are:
+- **Makespan:** 28.94 (versus 45.91 for TR1 1 HRC CS 95)
+- **Tasks:** 12 (versus 16 for TR1 1 HRC CS 95)
+- **Cost:** lower than TR1 1 HRC CS 95 (value omitted in the source).
+
+All other TR2‑series plans (TR2 1 HRC, TR2 2 HRC, etc.) share the same number of tasks and comparable cost with TR2 3 HRC CS 90, but they have higher makespans or are slower, cheaper, or shorter when compared with the same group. The plan classification remains consistent: TR2 3 HRC CS 90, TR2 2 HRC, TR1 1 HRC CS 90, and TR1 2 HRC CS 90 are TypicalPlans, while TR1 1 HRC CS 95 is an AtypicalPlan.","Simplified the original verbose ontology narrative by condensing repeated comparisons into a single summary, removed redundant equivalence statements, and used plain English. Only essential semantics—plan classification, relative performance metrics, makespan, task counts, and cost—were kept in the rewritten version.",gpt-oss:20b
+pair_133,"Plan **TR2‑3‑HRC‑CS‑90** is the best overall: it is cheaper, faster, shorter, and uses fewer tasks than the competing plan **TR2‑1‑HRC‑CS‑95**. Its finish time (makespan) is 28.94, compared with 40.95 for **TR2‑1‑HRC‑CS‑95**. It has 12 tasks versus 15 in that plan. It is labelled a *TypicalPlan*.
+
+Compared with other plans (TR1‑2‑HRC‑CS‑90, TR1‑3‑HRC‑CS‑90, TR2‑2‑HRC‑CS‑95, etc.) TR2‑3‑HRC‑CS‑90 remains the cheaper and shorter option, and its cost and task numbers are equivalent to several other plans, but none match its performance.","Simplified and condensed the original dense comparison data into a brief, easy‑to‑read summary that covers all the key relationships: cost, speed, length, tasks, makespan, and classification. Replaced the repetitive formal statements with concise sentences using plain language. The new narrative is shorter and keeps the same semantic meaning.",gpt-oss:20b
+pair_134,"The plan *TR2 3 HRC CS 90* is the best overall. It costs the least, finishes fastest (28.94 units of time versus 43.99 for *TR1 2 HRC CS 95*), and has the fewest tasks (12 versus 16). All other plans are either more expensive, longer, or involve more tasks. *TR2 3 HRC CS 90* matches *TR1 1 HRC* and *TR1 2 HRC* in cost and task count but still beats them on speed. Other *TR2* variants with more resources (*TR2 1*, *TR2 2*, *TR2 3*) all perform worse than *TR2 3 HRC CS 90* in at least one metric. The plan is classified as a *TypicalPlan* and receives the top quality ratings for makespan, task count, and cost.","Simplified language, condensed multiple comparisons into concise statements, removed repetitive phrases. The narrative now lists only distinct claims about cost, makespan, tasks, and plan quality, keeping the same relationships.",gpt-oss:20b
+pair_135,"The TR2 3 HRC CS 90 plan is better overall than the TR2 2 HRC CS 95 plan: it costs less, finishes faster (28.94 min vs 36.99 min), and uses fewer tasks (12 vs 14). It is also faster than the TR2 1 HRC CS 90 plan. Relative to the TR1 1 HRC plan, it has the same cost and task count but delivers higher quality. In all comparisons, TR2 3 HRC CS 90 stays cheaper, shorter, faster, and higher‑quality than the other considered plans.","Removed redundant comparisons, used simpler language, shortened the statement to key facts while keeping semantic meaning.",gpt-oss:20b
+pair_136,"**Plan Summary**
+
+- **TR2‑3‑HRC‑CS‑90** (the best plan) is **cheaper, faster, shorter, and overall better** than the reference plan **TR1‑3‑HRC‑CS‑95**.
+- It achieves this by having a smaller makespan (≈28.9) compared to TR1‑3‑HRC‑CS‑95’s 47.96, 12 tasks instead of 17, and a lower cost.
+- It also outperforms many other competitors: 
+  • Faster, cheaper, shorter, and better than TR2‑1‑HRC‑CS‑90, TR2‑2‑HRC‑CS‑90, TR2‑1‑HRC‑CS‑95, TR1‑2‑HRC‑CS‑95, TR1‑3‑HRC‑CS‑95, etc.
+- TR2‑3‑HRC‑CS‑90 is classified as a **TypicalPlan** and its quality measurements (makespan, tasks, cost) are marked as **TypicalPlanQualityValue**.
+- Comparable plans (TR2‑1‑HRC, TR1‑2‑HRC, TR1‑3‑HRC, TR2‑2‑HRC) have the same number of tasks as TR2‑3‑HRC‑CS‑90.
+- TR2‑3‑HRC‑CS‑95 has the same task count but the quality values are not better, and its cost value is missing.
+- In short, TR2‑3‑HRC‑CS‑90 dominates all other plans in the dataset and should be selected for any instance where cost, speed, and efficiency matter.
+","Rewrote the original complex ontology text into a concise, easy‑to‑read summary that preserves all major comparisons, quantitative values, and classifications. Removed repetitive statements, condensed long chains of relational clauses, and used plain language.",gpt-oss:20b
+pair_137,"**Summary of plan comparisons**
+
+- **Plan TR2 3 HRC CS 90** is overall better than **TR2 3 HRC CS 95**: it is cheaper, shorter, faster, and has a higher‑quality makespan, fewer tasks, and lower cost.
+- TR2 3 HRC CS 90 is also better (cheaper, shorter, better) than all the following plans: TR1 3 HRC CS 90, TR1 1 HRC CS 95, TR2 1 HRC CS 95, TR1 2 HRC CS 95, and TR2 2 HRC CS 95.
+- In terms of speed, TR2 3 HRC CS 90 outperforms each of TR2 1 HRC CS 90, TR2 2 HRC CS 90, TR2 1 HRC CS 95, and TR2 2 HRC CS 95.
+- The makespan for TR2 3 HRC CS 90 is **28.94**, better than TR2 3 HRC CS 95’s **42.99**. It has **12 tasks** (vs. 16 for the 95 plan) and a lower cost (value missing but better than 4.0 for the 95 plan).
+- All plans (TR1 1 HRC, TR1 2 HRC, TR1 3 HRC, TR2 1 HRC, TR2 2 HRC) share the same quantity of tasks as TR2 3 HRC CS 90.
+- The plan is classified as a TypicalPlan.  ","Condensed the original statement, removed repetitive comparison phrases, omitted duplicated facts and irrelevant quality value equivalences. Simplified language (e.g., “cheaper, shorter, faster, better” instead of repeating the full clause). Replaced explicit reference to each individual plan with grouped comparisons for clarity. Summarized key quality values (makespan, tasks, cost) only for the main plans. Removed the explicit mention of typical or atypical plan quality values and detailed cost/number of tasks equivalence tables.",gpt-oss:20b
+pair_138,"Plan TR1 1 HRC CS 95 is slower, longer, more expensive, and has a worse makespan (45.91 hrs), more tasks (16), and higher cost (4) than plan TR2 1 HRC CS 95, which has a makespan of 40.95 hrs, 15 tasks, and costs 3.
+
+TR1 1 HRC CS 95 is also slower, longer, and richer in cost than both TR1 2 HRC CS 90 and TR1 3 HRC CS 90.  It shares the same cost (4) and number of tasks (16) with TR1 2 HRC CS 95.
+
+Plan TR1 2 HRC CS 90 shares the same cost (3) and task count (15) as TR2 1 HRC CS 95.  TR2 3 HRC CS 95 has the same cost and task count as TR1 1 HRC CS 95, but its makespan, cost, and task count are worse than those of TR2 1 HRC CS 95.
+
+In short, TR2 1 HRC CS 95 is the best plan, followed by TR1 2 HRC CS 90 and TR1 3 HRC CS 90, while TR1 1 HRC CS 95 and TR2 3 HRC CS 95 are the least favorable.","Simplified the wording and condensed the content while keeping all comparisons of speed, duration, cost, makespan, and task count among the plans, along with their equalities in quality values.",gpt-oss:20b
+pair_139,"TR1 1 HRC CS 95 is a plan that costs the same and has the same number of tasks as TR1 2 HRC CS 95, but it takes longer. Its makespan is 45.908, which is worse than TR1 2 HRC CS 95’s makespan of 43.997. Both plans have identical cost and task counts.","Simplified wording, removed unnecessary phrases, and condensed the description while preserving all key comparisons (cost, task count, makespan, and speed).",gpt-oss:20b
+pair_140,"Plan TR1 1 HRC CS 95 costs more, takes longer, runs slower, and is worse than plan TR2 2 HRC CS 95. It is slower than TR1 1 HRC CS 90, TR1 2 HRC CS 90, TR1 3 HRC CS 90, TR2 1 HRC CS 95, TR1 2 HRC CS 95, and TR2 3 HRC CS 95. Compared to the same‑cost plans TR1 2 HRC CS 95 (equal cost and task count) it remains worse in quality. TR1 1 HRC CS 95 is marked as an atypical plan; its makespan (45.91) is slower (worse quality) than the typical 36.99 of TR2 2 HRC CS 95, and it has 16 tasks compared to 14 for TR2 2. The cost is 4.0 versus 2.0 for the typical plan. Similarly, other plans with the same cost or task count share equivalent quality values as noted in the ontology.","Simplified language, removed redundant comparisons, shortened sentences, retained key comparisons between plans.",gpt-oss:20b
+pair_141,"Plan TR1‑1 is cheaper, faster, shorter and better than plan TR1‑3. It costs 4, has 16 tasks, and a makespan of 45.91. Plans TR1‑2 and TR2‑3 share the same cost (4) and task count (16) as TR1‑1, and they are also cheaper, shorter and better than TR1‑3. Plan TR1‑3 costs 5, has 17 tasks, and a makespan of 47.96. The cost, task count and makespan of TR1‑1 are lower (better) than those of TR1‑3. All three plans (TR1‑1, TR1‑2, TR2‑3) are equivalent in cost and task count.","Simplified language, shortened text, removed repetitive comparisons, retained all essential relations and numerical values.",gpt-oss:20b
+pair_142,"The plan TR1 1 HRC CS 95 costs the same as TR2 3 HRC CS 95 and has the same number of tasks, but it takes longer and has a worse makespan (45.91) than TR2 3 HRC CS 95 (42.99). TR1 1 is also slower and worse than TR1 3 HRC CS 90 and TR1 2 HRC CS 95. Its makespan is worse than both of those plans and also worse than TR2 3 HRC CS 95’s makespan.","Simplified language, removed redundant phrasing, condensed comparisons into concise statements while preserving all original factual relationships.",gpt-oss:20b
+pair_143,"Plan TR2 1 HRC CS 95 is the best overall. It costs $3, runs in 40.95 units of time, and needs 15 tasks—better than TR1 2 HRC CS 95, which costs $4, takes 43.99 time, and needs 16 tasks. TR2 1 HRC CS 95 is also cheaper, shorter, and better than TR1 1 HRC CS 95 and TR2 3 HRC CS 95.
+
+Plan TR1 3 HRC CS 90 is the next best. It is cheaper and faster than both TR1 1 HRC CS 95 and TR1 2 HRC CS 95, and it has the same cost and number of tasks as TR2 1 HRC CS 95.
+
+Plan TR1 2 HRC CS 90 is cheaper and shorter than TR1 1 HRC CS 95, and it has the same cost as TR2 1 HRC CS 95, though it’s still slower and heavier than TR1 3 HRC CS 90.
+
+In short: TR2 1 HRC CS 95 > TR1 3 HRC CS 90 > TR1 2 HRC CS 90 > TR1 1 HRC CS 95 and TR2 3 HRC CS 95.","Simplified language, removed redundant statements, condensed into clear ranking and key metrics",gpt-oss:20b
+pair_144,"Plan TR2‑2 and plan TR1‑1 are the best: each costs 2, takes 36.99 time units, and needs 14 tasks. They’re faster, cheaper, and use fewer tasks than any other plan. 
+
+Plan TR2‑1 (and plans TR1‑2 and TR1‑3) are worse: each costs 3, takes 40.95 time units, and needs 15 tasks. TR2‑1 is the most expensive, slowest, and has the worst quality values. 
+
+Plan TR2‑1 is also called an “AtypicalPlan,” and its cost and task count are marked as atypical quality values. TR1‑1 matches TR2‑2 exactly in cost and task count; TR1‑2 and TR1‑3 match TR2‑1 in cost and tasks but have poorer quality. ","Simplified comparisons, removed redundant statements, consolidated plan facts, kept key relationships and classifications.",gpt-oss:20b
+pair_145,"**Short, Easy‑to‑Read Summary of Plan Comparisons**
+
+- **TR2 1 HRC CS 95** is the overall best plan:
+  * Cheapest (cost 3 vs. 5 for TR1 3 HRC CS 95)
+  * Shorter (15 tasks vs. 17 for TR1 3 HRC CS 95)
+  * Faster (makespan ≈ 40.95 h vs. 47.96 h for TR1 3 HRC CS 95)
+  * Better quality in all three measures.
+  * It also ties in cost and task‑count with **TR1 2 HRC CS 90**.
+
+- **TR1 2 HRC CS 90** outranks **TR1 3 HRC CS 95**:
+  * Cheaper, shorter, and faster.
+  * It matches **TR2 1 HRC CS 95** in cost and number of tasks.
+
+- **TR1 3 HRC CS 90** is better than **TR1 2 HRC CS 95** and **TR2 3 HRC CS 95**:
+  * Cheaper, shorter, faster, and higher quality.
+  * It is also better than **TR1 3 HRC CS 95**.
+
+- **TR2 3 HRC CS 95** and **TR1 1 HRC CS 95** are slightly worse than the above plans:
+  * Higher cost, longer makespan, and more tasks than **TR2 1 HRC CS 95**.
+  * They are outperformed by **TR1 2 HRC CS 90** and **TR1 3 HRC CS 90**.
+
+- In all comparisons, the hierarchy from best to worst is: **TR2 1 HRC CS 95** > **TR1 3 HRC CS 90** > **TR1 2 HRC CS 90** (≈ TR2 1 HRC CS 95) > **TR1 1 HRC CS 95** > **TR2 3 HRC CS 95** > **TR1 3 HRC CS 95**.","Simplified and shortened the ontology narrative into a concise, plain‑language summary that retains all comparative relationships among the plans. Replaced formal ontology syntax with straightforward sentences, removed redundant repetitions, and kept all cost, makespan, task number, and quality comparisons.",gpt-oss:20b
+pair_146,"Plan TR2‑1HRC95 is the best overall. It is cheaper, shorter, faster, and has fewer tasks than all other plans. Its makespan is 40.95, cost 3.0, and task count 15, which are all better than those of TR2‑3HRC95 (makespan 42.99, cost 4.0, 16 tasks) and the TR1‑1HRC95 / TR1‑2HRC95 plans.
+
+TR2‑1HRC95 has the same cost as TR1‑2HRC90 and the same number of tasks, but is still faster (TR1‑2HRC90 makespan 39.0). Both TR1‑3HRC90 and TR1‑2HRC90 are cheaper than TR2‑3HRC95, and TR1‑3HRC90 also has fewer tasks.
+
+Overall, TR2‑1HRC95 provides the best trade‑off among cost, time, and task count, making it the preferred plan.","Simplified language, reduced length, preserved all comparative relationships and numeric values.",gpt-oss:20b
+pair_147,"Plan ""TR1 2 HRC CS 95"" is the worst among the listed plans. It costs twice as much as plan ""TR2 2 HRC CS 95"" (4.0 vs 2.0), takes longer to finish (makespan 43.99 vs 36.99), and has two more tasks (16 vs 14). It is also slower and longer than all the 90‑level plans and more expensive than all of them.
+
+Plan ""TR2 2 HRC CS 95"" is the best: it has the lowest cost, fewest tasks, and shortest makespan, and its values are classified as typical quality.
+
+Plan ""TR1 1 HRC CS 95"" shares the same cost (4.0) and same number of tasks (16) as “TR1 2 HRC CS 95”.
+
+Plan ""TR2 3 HRC CS 95"" matches “TR1 2 HRC CS 95” on cost and on the number of tasks, but it is not in the top tier.
+
+The 90‑level plans (“TR1 1/2/3 HRC CS 90”) all have similar costs (about 4.0) and task counts but their makespans are worse than the 95‑level plans.
+
+In short: ""TR2 2 HRC CS 95"" wins on all quality measures; ""TR1 2 HRC CS 95"" is the least attractive, with duplicates in cost and task count seen in ""TR1 1 HRC CS 95"" and ""TR2 3 HRC CS 95"".","Simplified wording, removed redundant comparisons, limited to key metrics and equivalences.",gpt-oss:20b
+pair_148,"Plan TR1‑2 HRC CS 95 is cheaper, shorter, faster and better than TR1‑3 HRC CS 95. It has a makespan of 43.997, 16 tasks and costs 4, compared to 47.956 makespan, 17 tasks and cost 5 for TR1‑3.
+
+Plan TR1‑1 HRC CS 95 has the same cost and number of tasks as TR1‑2, but is even faster.
+
+Plan TR2‑3 HRC CS 95 is better than TR1‑3 and has the same cost and task count as TR1‑2 and TR1‑1, while also being faster and shorter.","Simplified comparisons, removed repetitive phrases, shortened to essential facts, used plain English instead of ontology terms.",gpt-oss:20b
+pair_149,"Plan TR1 2 HRC CS 95 has the same cost and the same number of tasks as plan TR2 3 HRC CS 95, but it takes longer: its makespan is 43.997 while TR2 3’s is 42.992. Plan TR1 3 HRC CS 90 is faster and better; its makespan is lower than TR2 3’s, and TR1 2’s makespan is higher than TR1 3’s. All plans have comparable cost and task counts.","Reduced length by eliminating redundant phrasing, simplified terminology, kept all cost, task, makespan, and speed comparisons.",gpt-oss:20b
+pair_150,"Plan TR2 2 HRC CS 95 is the best overall. It is cheaper, has fewer tasks, and finishes faster than every other plan (including TR1 3 HRC CS 95, TR1 1 HRC CS 90, TR1 2/3 HRC CS 90/95, and TR2 1/3 HRC CS 95). Its makespan is also shorter. The plan is labeled a TypicalPlan. Plan TR1 1 HRC CS 90 is cost‑effective as well, but TR2 2 beats it on all metrics. Other plans like TR1 3 HRC CS 90 and TR2 3 HRC CS 95 match TR1 1 HRC CS 90 in cost or task count, yet they are still worse than TR2 2. The plan TR1 3 HRC CS 95 is atypical and has the highest cost, largest task count, and longest makespan.","Reduced repetitive comparisons, replaced technical phrases with simple words, shortened the narrative while preserving all key relationships.",gpt-oss:20b
+pair_151,"Plan **TR2 2 HRC CS 95** is the best of the three. It costs **2.0**, has a makespan of **36.995** and needs **14** tasks.  It is cheaper, faster, shorter and better than **TR2 3 HRC CS 95** and also better than **TR1 2 HRC CS 90**.  TR2 2 shares the same cost and number of tasks as **TR1 1 HRC CS 90**.  
+
+**TR1 2 HRC CS 90** is cheaper than **TR2 3 HRC CS 95** and is faster, shorter and better than that plan.  
+
+**TR1 1 HRC CS 90** is the cheapest and shortest overall; it is cheaper than **TR1 1 HRC CS 95** and **TR1 2 HRC CS 95**, and it is also better and faster than **TR1 3 HRC CS 90**.  All plans except **TR2 3 HRC CS 95** are classified as *TypicalPlan*.  **TR2 3 HRC CS 95** has values labeled *AtypicalPlanQualityValue* for makespan, tasks and cost.","Simplified language, removed redundant comparisons, condensed numeric details, retained key relational statements and quality/value info",gpt-oss:20b
+pair_152,"""TR1 3 HRC CS 95"" is the worst among the listed plans: it costs 5, takes 47.96 time units, and has 17 tasks. In every respect it is poorer than ""TR2 3 HRC CS 95"", which costs 4, takes 42.99 time units, and has 16 tasks.
+
+TR2 3 HRC CS 95 is equivalent to ""TR1 1 HRC CS 95"" in both cost and number of tasks.
+
+""TR1 3 HRC CS 90"" has a worse makespan than ""TR2 3 HRC CS 95"", but it is still better than ""TR1 3 HRC CS 95"".
+
+""TR1 1 HRC CS 95"" and ""TR1 2 HRC CS 95"" each have the same cost and task count as ""TR2 3 HRC CS 95"", yet they are faster and shorter than ""TR1 3 HRC CS 95"".
+
+In short, ""TR1 3 HRC CS 95"" is more expensive, slower, longer, and has more tasks than all other plans; ""TR2 3 HRC CS 95"" is the best plan, with the lowest cost, shortest makespan, and fewest tasks.
+","Simplified language, removed repetitive phrasing, collapsed similar comparisons into summarized statements, kept numeric values and key equivalences.",gpt-oss:20b
