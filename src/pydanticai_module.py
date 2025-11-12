@@ -5,7 +5,7 @@
 from pydantic import BaseModel, Field
 from typing import Union
 
-from pydantic_ai import Agent
+from pydantic_ai import Agent, ModelMessagesTypeAdapter
 from pydantic_ai.models.openai import OpenAIModel
 from pydantic_ai.providers.openai import OpenAIProvider
 
