@@ -1,0 +1,307 @@
+Pair ID,Explanation
+pair_0,"'TR1 1 HRC' is plan with same cost as and is plan with same number of tasks as and is slower plan than 'TR2 1 HRC'. 
+"
+pair_1,"'TR1 1 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR1 2 HRC'. 
+"
+pair_2,"'TR1 1 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 2 HRC'. 
+"
+pair_3,"'TR1 1 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR1 3 HRC'. 
+"
+pair_4,"'TR1 1 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 3 HRC'. 
+"
+pair_5,"'TR1 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 90'. 
+"
+pair_6,"'TR1 1 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 1 HRC CS 90'. 
+"
+pair_7,"'TR1 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 90'. 
+"
+pair_8,"'TR1 1 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 2 HRC CS 90'. 
+"
+pair_9,"'TR1 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 90'. 
+"
+pair_10,"'TR1 1 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 3 HRC CS 90'. 
+"
+pair_11,"'TR1 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 95'. 
+"
+pair_12,"'TR1 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 1 HRC CS 95'. 
+"
+pair_13,"'TR1 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 95'. 
+"
+pair_14,"'TR1 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 2 HRC CS 95'. 
+"
+pair_15,"'TR1 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_16,"'TR1 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 3 HRC CS 95'. 
+"
+pair_17,"'TR2 1 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR1 2 HRC'. 
+"
+pair_18,"'TR2 1 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 2 HRC'. 
+"
+pair_19,"'TR2 1 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR1 3 HRC'. 
+"
+pair_20,"'TR2 1 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 3 HRC'. 
+"
+pair_21,"'TR2 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 90'. 
+"
+pair_22,"'TR2 1 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 1 HRC CS 90'. 
+"
+pair_23,"'TR2 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 90'. 
+"
+pair_24,"'TR2 1 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 2 HRC CS 90'. 
+"
+pair_25,"'TR2 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 90'. 
+"
+pair_26,"'TR2 1 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 3 HRC CS 90'. 
+"
+pair_27,"'TR2 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 95'. 
+"
+pair_28,"'TR2 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 1 HRC CS 95'. 
+"
+pair_29,"'TR2 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 95'. 
+"
+pair_30,"'TR2 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 2 HRC CS 95'. 
+"
+pair_31,"'TR2 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_32,"'TR2 1 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 3 HRC CS 95'. 
+"
+pair_33,"'TR1 2 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 2 HRC'. 
+"
+pair_34,"'TR1 2 HRC' is plan with same cost as and is plan with same number of tasks as and is slower plan than 'TR1 3 HRC'. 
+"
+pair_35,"'TR1 2 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 3 HRC'. 
+"
+pair_36,"'TR1 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 90'. 
+"
+pair_37,"'TR1 2 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 1 HRC CS 90'. 
+"
+pair_38,"'TR1 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 90'. 
+"
+pair_39,"'TR1 2 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 2 HRC CS 90'. 
+"
+pair_40,"'TR1 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 90'. 
+"
+pair_41,"'TR1 2 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 3 HRC CS 90'. 
+"
+pair_42,"'TR1 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 95'. 
+"
+pair_43,"'TR1 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 1 HRC CS 95'. 
+"
+pair_44,"'TR1 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 95'. 
+"
+pair_45,"'TR1 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 2 HRC CS 95'. 
+"
+pair_46,"'TR1 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_47,"'TR1 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 3 HRC CS 95'. 
+"
+pair_48,"'TR2 2 HRC' is plan with same cost as and is plan with same number of tasks as and is slower plan than 'TR1 3 HRC'. 
+"
+pair_49,"'TR2 2 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 3 HRC'. 
+"
+pair_50,"'TR2 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 90'. 
+"
+pair_51,"'TR2 2 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 1 HRC CS 90'. 
+"
+pair_52,"'TR2 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 90'. 
+"
+pair_53,"'TR2 2 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 2 HRC CS 90'. 
+"
+pair_54,"'TR2 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 90'. 
+"
+pair_55,"'TR2 2 HRC' is plan with same cost as and is plan with same number of tasks as and is slower plan than 'TR2 3 HRC CS 90'. 
+"
+pair_56,"'TR2 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 95'. 
+"
+pair_57,"'TR2 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 1 HRC CS 95'. 
+"
+pair_58,"'TR2 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 95'. 
+"
+pair_59,"'TR2 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 2 HRC CS 95'. 
+"
+pair_60,"'TR2 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_61,"'TR2 2 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 3 HRC CS 95'. 
+"
+pair_62,"'TR1 3 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 3 HRC'. 
+"
+pair_63,"'TR1 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 90'. 
+"
+pair_64,"'TR1 3 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 1 HRC CS 90'. 
+"
+pair_65,"'TR1 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 90'. 
+"
+pair_66,"'TR1 3 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 2 HRC CS 90'. 
+"
+pair_67,"'TR1 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 90'. 
+"
+pair_68,"'TR1 3 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 3 HRC CS 90'. 
+"
+pair_69,"'TR1 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 95'. 
+"
+pair_70,"'TR1 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 1 HRC CS 95'. 
+"
+pair_71,"'TR1 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 95'. 
+"
+pair_72,"'TR1 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 2 HRC CS 95'. 
+"
+pair_73,"'TR1 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_74,"'TR1 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 3 HRC CS 95'. 
+"
+pair_75,"'TR2 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 90'. 
+"
+pair_76,"'TR2 3 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 1 HRC CS 90'. 
+"
+pair_77,"'TR2 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 90'. 
+"
+pair_78,"'TR2 3 HRC' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR2 2 HRC CS 90'. 
+"
+pair_79,"'TR2 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 90'. 
+"
+pair_80,"'TR2 3 HRC' is plan with same cost as and is plan with same number of tasks as and is slower plan than 'TR2 3 HRC CS 90'. 
+"
+pair_81,"'TR2 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 95'. 
+"
+pair_82,"'TR2 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 1 HRC CS 95'. 
+"
+pair_83,"'TR2 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 95'. 
+"
+pair_84,"'TR2 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 2 HRC CS 95'. 
+"
+pair_85,"'TR2 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_86,"'TR2 3 HRC' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 3 HRC CS 95'. 
+"
+pair_87,"'TR1 1 HRC CS 90' is more expensive plan than and is longer plan than and is slower plan than and is worse plan than 'TR2 1 HRC CS 90'. 
+"
+pair_88,"'TR1 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 90'. 
+"
+pair_89,"'TR1 1 HRC CS 90' is more expensive plan than and is longer plan than and is slower plan than and is worse plan than 'TR2 2 HRC CS 90'. 
+"
+pair_90,"'TR1 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 90'. 
+"
+pair_91,"'TR1 1 HRC CS 90' is more expensive plan than and is longer plan than and is slower plan than and is worse plan than 'TR2 3 HRC CS 90'. 
+"
+pair_92,"'TR1 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 95'. 
+"
+pair_93,"'TR1 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 1 HRC CS 95'. 
+"
+pair_94,"'TR1 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 95'. 
+"
+pair_95,"'TR1 1 HRC CS 90' is plan with same cost as and is plan with same number of tasks as and is slower plan than 'TR2 2 HRC CS 95'. 
+"
+pair_96,"'TR1 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_97,"'TR1 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 3 HRC CS 95'. 
+"
+pair_98,"'TR2 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 90'. 
+"
+pair_99,"'TR2 1 HRC CS 90' is plan with same cost as and is plan with same number of tasks as and is slower plan than 'TR2 2 HRC CS 90'. 
+"
+pair_100,"'TR2 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 90'. 
+"
+pair_101,"'TR2 1 HRC CS 90' is plan with same cost as and is plan with same number of tasks as and is slower plan than 'TR2 3 HRC CS 90'. 
+"
+pair_102,"'TR2 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 95'. 
+"
+pair_103,"'TR2 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 1 HRC CS 95'. 
+"
+pair_104,"'TR2 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 95'. 
+"
+pair_105,"'TR2 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 2 HRC CS 95'. 
+"
+pair_106,"'TR2 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_107,"'TR2 1 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 3 HRC CS 95'. 
+"
+pair_108,"'TR1 2 HRC CS 90' is more expensive plan than and is longer plan than and is slower plan than and is worse plan than 'TR2 2 HRC CS 90'. 
+"
+pair_109,"'TR1 2 HRC CS 90' is plan with same cost as and is plan with same number of tasks as and is faster plan than 'TR1 3 HRC CS 90'. 
+"
+pair_110,"'TR1 2 HRC CS 90' is more expensive plan than and is longer plan than and is slower plan than and is worse plan than 'TR2 3 HRC CS 90'. 
+"
+pair_111,"'TR1 2 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 95'. 
+"
+pair_112,"'TR1 2 HRC CS 90' is plan with same cost as and is plan with same number of tasks as and is slower plan than 'TR2 1 HRC CS 95'. 
+"
+pair_113,"'TR1 2 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 95'. 
+"
+pair_114,"'TR1 2 HRC CS 90' is more expensive plan than and is longer plan than and is slower plan than and is worse plan than 'TR2 2 HRC CS 95'. 
+"
+pair_115,"'TR1 2 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_116,"'TR1 2 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 3 HRC CS 95'. 
+"
+pair_117,"'TR2 2 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 90'. 
+"
+pair_118,"'TR2 2 HRC CS 90' is plan with same cost as and is plan with same number of tasks as and is slower plan than 'TR2 3 HRC CS 90'. 
+"
+pair_119,"'TR2 2 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 95'. 
+"
+pair_120,"'TR2 2 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 1 HRC CS 95'. 
+"
+pair_121,"'TR2 2 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 95'. 
+"
+pair_122,"'TR2 2 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 2 HRC CS 95'. 
+"
+pair_123,"'TR2 2 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_124,"'TR2 2 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 3 HRC CS 95'. 
+"
+pair_125,"'TR1 3 HRC CS 90' is more expensive plan than and is longer plan than and is slower plan than and is worse plan than 'TR2 3 HRC CS 90'. 
+"
+pair_126,"'TR1 3 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 95'. 
+"
+pair_127,"'TR1 3 HRC CS 90' is plan with same cost as and is plan with same number of tasks as and is slower plan than 'TR2 1 HRC CS 95'. 
+"
+pair_128,"'TR1 3 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 95'. 
+"
+pair_129,"'TR1 3 HRC CS 90' is more expensive plan than and is longer plan than and is slower plan than and is worse plan than 'TR2 2 HRC CS 95'. 
+"
+pair_130,"'TR1 3 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_131,"'TR1 3 HRC CS 90' is cheaper plan than and is shorter plan than and is slower plan than 'TR2 3 HRC CS 95'. 
+"
+pair_132,"'TR2 3 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 1 HRC CS 95'. 
+"
+pair_133,"'TR2 3 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 1 HRC CS 95'. 
+"
+pair_134,"'TR2 3 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 95'. 
+"
+pair_135,"'TR2 3 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 2 HRC CS 95'. 
+"
+pair_136,"'TR2 3 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_137,"'TR2 3 HRC CS 90' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 3 HRC CS 95'. 
+"
+pair_138,"'TR1 1 HRC CS 95' is more expensive plan than and is longer plan than and is slower plan than and is worse plan than 'TR2 1 HRC CS 95'. 
+"
+pair_139,"'TR1 1 HRC CS 95' is plan with same cost as and is plan with same number of tasks as and is slower plan than 'TR1 2 HRC CS 95'. 
+"
+pair_140,"'TR1 1 HRC CS 95' is more expensive plan than and is longer plan than and is slower plan than and is worse plan than 'TR2 2 HRC CS 95'. 
+"
+pair_141,"'TR1 1 HRC CS 95' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_142,"'TR1 1 HRC CS 95' is plan with same cost as and is plan with same number of tasks as and is slower plan than 'TR2 3 HRC CS 95'. 
+"
+pair_143,"'TR2 1 HRC CS 95' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 2 HRC CS 95'. 
+"
+pair_144,"'TR2 1 HRC CS 95' is more expensive plan than and is longer plan than and is slower plan than and is worse plan than 'TR2 2 HRC CS 95'. 
+"
+pair_145,"'TR2 1 HRC CS 95' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_146,"'TR2 1 HRC CS 95' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 3 HRC CS 95'. 
+"
+pair_147,"'TR1 2 HRC CS 95' is more expensive plan than and is longer plan than and is slower plan than and is worse plan than 'TR2 2 HRC CS 95'. 
+"
+pair_148,"'TR1 2 HRC CS 95' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_149,"'TR1 2 HRC CS 95' is plan with same cost as and is plan with same number of tasks as and is slower plan than 'TR2 3 HRC CS 95'. 
+"
+pair_150,"'TR2 2 HRC CS 95' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR1 3 HRC CS 95'. 
+"
+pair_151,"'TR2 2 HRC CS 95' is cheaper plan than and is shorter plan than and is faster plan than and is better plan than 'TR2 3 HRC CS 95'. 
+"
+pair_152,"'TR1 3 HRC CS 95' is more expensive plan than and is longer plan than and is slower plan than and is worse plan than 'TR2 3 HRC CS 95'. 
+"
