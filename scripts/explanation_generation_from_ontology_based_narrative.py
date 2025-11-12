@@ -31,8 +31,8 @@ if __name__ == "__main__":
     utils_object = utilsModule()
     test_utils_object = testUtilsModule()
 
-    model_to_run = 'qwen3:8b' # qwen3:14b  |  qwen3:8b  |  qwen3:1.7b  |  gpt-oss:20b  
-    specificity = 1
+    model_to_run = 'qwen3:30b' # qwen3:14b  |  qwen3:8b  |  qwen3:1.7b  |  qwen3:32b  |  gpt-oss:20b  
+    specificity = 3
     dataset_name = 'collaborative_ssd_case_inspection'
 
     narratives_csv_file = "generated_c_narratives_multiple_plans_comparison_with_specificity_" \
@@ -93,6 +93,7 @@ if __name__ == "__main__":
             [narratives_dict["Explanation"][i], result.output.narrative])) # item() turns the np.float into python float
 
         elapsed_time = final_time - start_time
+        print('Execution number: ', i)
         print('Execution time:', time.strftime("%H:%M:%S", time.gmtime(elapsed_time)))
 
     
