@@ -11,7 +11,7 @@ cd <know_rox_folder>/python_environment
 python3 -m venv know_rox_venv
 source know_rox_venv/bin/activate
 
-python3 -m pip install pandas ollama pydantic-ai textstat scikit-learn
+python3 -m pip install pandas ollama pydantic-ai textstat scikit-learn transformers[torch] transformers sentence-transformers deepeval
 ```
 
 It is also necessary to install the python modules included in the source folder. 
@@ -29,6 +29,14 @@ cd <know_rox_folder>
 
 python3 -m pip install -e .
 ```
+
+### Setup for evaluation
+Part of the evaluation of the explanations consists in computing their semantic similarity with respect to the original ontology-based narratives. This is done using different estrategies/metrics: direct cosine similarity on the text, cross-encoder similarity, and LLM-as-a-judge. For the last one, we are using the deepEval library, which allows using models from Ollama, but comes with a pre-selected list of available models. Hence, if you want to use a specific model for the evaluation (e.g. 'gpt-oss:20b') it is necessary to set it up in the terminal (CLI).
+
+```
+deepeval set-ollama --model=gpt-oss:20b
+```
+
 
 
 ### Downloading files from an external github repository (explanatory_narratives_cra)
