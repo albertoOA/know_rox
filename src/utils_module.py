@@ -9,6 +9,9 @@ from pathlib import Path
 from collections import Counter, defaultdict
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from deepeval.metrics import GEval
+from deepeval.test_case import LLMTestCase, SingleTurnParams
+from deepeval.models import OllamaModel
 
 class utilsModule:
     def __init__(self):
@@ -64,6 +67,30 @@ class testUtilsModule:
     def __init__(self):
         # Variables
         self.memory_usage_ = 0
+
+        self.evaluation_model_to_run = 'gpt-oss:20b' # qwen3:14b  |  qwen3:8b  |  qwen3:1.7b  |  qwen3:32b  |  gpt-oss:20b  
+        self.ollama_judge = OllamaModel(
+            model=self.evaluation_model_to_run, 
+            base_url="http://localhost:11434",
+            temperature=0.0
+        ) # initialize the local Ollama judge model with 0 temperature for more deterministic grading behavior.
+
+        # define a Custom Semantic Similarity Metric using G-Eval
+        self.semantic_similarity_metric = GEval(
+            name="Semantic Coherence Similarity",
+            model=self.ollama_judge,
+            # Define the parameters G-Eval needs to look at from the test case
+            evaluation_params=[SingleTurnParams.INPUT, SingleTurnParams.ACTUAL_OUTPUT],
+            # The exact criteria the judge will grade against
+            evaluation_steps=[
+                "Compare the core semantic meaning of the actual output against the input narrative.",
+                "Ignore changes in tone, formatting, and minor stylistic embellishments that make the text sound more 'natural'.",
+                "Penalize heavily if critical facts, core relationship dynamics, or data points are missing or altered.",
+                "Determine if a human reading the actual output would walk away with the exact same understanding as reading the input narrative.",
+                "Rate the similarity on a scale from 0 (completely different meaning) to 1 (perfect semantic equivalence)."
+            ],
+            threshold=0.75  # Pass/Fail threshold for your pipeline tests
+        )
 
     def get_memory_usage(self): 
         """
@@ -121,3 +148,34 @@ class testUtilsModule:
             cosine_similarity_out = cosine_similarity(df, df)
 
         return cosine_similarity_out
+
+    def compute_semantic_similarity_with_llm_as_judge(self, ground_truth: str, natural_explanation: str):
+        """
+        Computes the semantic similarity between the original ontology-based narrative 
+        and the naturalized explanation.
+
+        Args:
+            ground_truth: a string containing the initial narrative
+            natural_explanation: a string containing the final more natural explanation
+
+        Returns:
+            output_dictionary: a dictionary containing the similarity score, reason, and 
+                               whether the score is higher a threshold 
+        """
+        # In DeepEval's LLMTestCase schema:
+        # - `input` acts as our baseline anchor (Ground Truth Narrative)
+        # - `actual_output` acts as what we are evaluating (Natural Explanation)
+        test_case = LLMTestCase(
+            input=ground_truth,
+            actual_output=natural_explanation
+        )
+        
+        # Run the metric evaluation
+        self.semantic_similarity_metric.measure(test_case)
+        
+        # Return structured results
+        return {
+            "score": self.semantic_similarity_metric.score,
+            "reason": self.semantic_similarity_metric.reason,
+            "passed": self.semantic_similarity_metric.is_successful()
+        }
