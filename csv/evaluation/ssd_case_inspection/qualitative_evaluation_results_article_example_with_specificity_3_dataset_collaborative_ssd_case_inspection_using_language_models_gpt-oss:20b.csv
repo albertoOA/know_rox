@@ -1,0 +1,7 @@
+Pair ID,Dataset,Language model,Specificity,Words,Readability score,Cosine similarity,Bi-encoder similarity,Cross-encoder similarity,LLM-judge similarity,LLM-judge similarity SD,LLM-judge similarity MAD
+correct explanation,collaborative_ssd_case_inspection,gpt-oss:20b,3,47,94.4841666666667,0.761912259774836,0.8046723008155823,0.67821413,1.0,0.0,0.0
+minor numeric error,collaborative_ssd_case_inspection,gpt-oss:20b,3,47,92.89400000000002,0.7624222889315052,0.804760217666626,0.66658956,0.7999999999999998,2.220446049250313e-16,0.0
+major numeric error,collaborative_ssd_case_inspection,gpt-oss:20b,3,47,92.89400000000002,0.7597377034070985,0.8025187849998474,0.6173273,0.39799999999999996,0.01989974874213239,0.0
+semantic error i - inversed typicality,collaborative_ssd_case_inspection,gpt-oss:20b,3,48,94.4841666666667,0.761912259774836,0.8072640299797058,0.67839456,0.601,0.00994987437106619,0.0
+semantic error ii - inversed better plan,collaborative_ssd_case_inspection,gpt-oss:20b,3,47,96.28416666666669,0.7592388834247489,0.8057675957679749,0.614187,0.19999999999999996,5.551115123125783e-17,0.0
+semantic error iii - inversed shorter plan,collaborative_ssd_case_inspection,gpt-oss:20b,3,47,94.4841666666667,0.7592388834247489,0.8068379759788513,0.65494716,0.30099999999999993,0.009949874371066198,0.0
