@@ -85,7 +85,7 @@ class testUtilsModule:
             evaluation_steps=[
                 "Compare the core semantic meaning of the actual output against the input narrative.",
                 "Ignore changes in tone, formatting, and minor stylistic embellishments that make the text sound more 'natural'.",
-                "Penalize heavily if critical facts, core relationship dynamics, or data points are missing or altered.",
+                "Penalize heavily if semantic facts, core semantic relationship dynamics, or (numeric) data are missing or altered.",
                 "Determine if a human reading the actual output would walk away with the exact same understanding as reading the input narrative.",
                 "Rate the similarity on a scale from 0 (completely different meaning) to 1 (perfect semantic equivalence)."
             ],
