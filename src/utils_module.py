@@ -68,29 +68,9 @@ class testUtilsModule:
         # Variables
         self.memory_usage_ = 0
 
-        self.evaluation_model_to_run = 'gpt-oss:20b' # qwen3:14b  |  qwen3:8b  |  qwen3:1.7b  |  qwen3:32b  |  gpt-oss:20b  
-        self.ollama_judge = OllamaModel(
-            model=self.evaluation_model_to_run, 
-            base_url="http://localhost:11434",
-            temperature=0.0
-        ) # initialize the local Ollama judge model with 0 temperature for more deterministic grading behavior.
-
-        # define a Custom Semantic Similarity Metric using G-Eval
-        self.semantic_similarity_metric = GEval(
-            name="Semantic Coherence Similarity",
-            model=self.ollama_judge,
-            # Define the parameters G-Eval needs to look at from the test case
-            evaluation_params=[SingleTurnParams.INPUT, SingleTurnParams.ACTUAL_OUTPUT],
-            # The exact criteria the judge will grade against
-            evaluation_steps=[
-                "Compare the core semantic meaning of the actual output against the input narrative.",
-                "Ignore changes in tone, formatting, and minor stylistic embellishments that make the text sound more 'natural'.",
-                "Penalize heavily if semantic facts, core semantic relationship dynamics, or (numeric) data are missing or altered.",
-                "Determine if a human reading the actual output would walk away with the exact same understanding as reading the input narrative.",
-                "Rate the similarity on a scale from 0 (completely different meaning) to 1 (perfect semantic equivalence)."
-            ],
-            threshold=0.75  # Pass/Fail threshold for your pipeline tests
-        )
+        self.evaluation_model_to_run = None
+        self.ollama_judge = None
+        self.semantic_similarity_metric = None
 
     def get_memory_usage(self): 
         """
@@ -149,6 +129,41 @@ class testUtilsModule:
 
         return cosine_similarity_out
 
+    def init_semantic_similarity_metric_with_llm_as_judge(self, model: str):
+        """
+        Initializes a semantic similarity metric based on llm-as-judges using an input model.
+
+        Args:
+            model: a string containing the language model to use as judge
+
+        Returns:
+            -
+        """
+        self.evaluation_model_to_run = model
+
+        self.ollama_judge = OllamaModel(
+            model=self.evaluation_model_to_run, 
+            base_url="http://localhost:11434",
+            temperature=0.0
+        ) # initialize the local Ollama judge model with 0 temperature for more deterministic grading behavior.
+
+        # define a Custom Semantic Similarity Metric using G-Eval
+        self.semantic_similarity_metric = GEval(
+            name="Semantic Coherence Similarity",
+            model=self.ollama_judge,
+            # Define the parameters G-Eval needs to look at from the test case
+            evaluation_params=[SingleTurnParams.INPUT, SingleTurnParams.ACTUAL_OUTPUT],
+            # The exact criteria the judge will grade against
+            evaluation_steps=[
+                "Compare the core semantic meaning of the actual output against the input narrative.",
+                "Ignore changes in tone, formatting, and minor stylistic embellishments that make the text sound more 'natural'.",
+                "Penalize heavily if semantic facts, core semantic relationship dynamics, or (numeric) data are missing or altered.",
+                "Determine if a human reading the actual output would walk away with the exact same understanding as reading the input narrative.",
+                "Rate the similarity on a scale from 0 (completely different meaning) to 1 (perfect semantic equivalence)."
+            ],
+            threshold=0.75  # Pass/Fail threshold for your pipeline tests
+        )
+
     def compute_semantic_similarity_with_llm_as_judge(self, ground_truth: str, natural_explanation: str):
         """
         Computes the semantic similarity between the original ontology-based narrative 
@@ -157,6 +172,7 @@ class testUtilsModule:
         Args:
             ground_truth: a string containing the initial narrative
             natural_explanation: a string containing the final more natural explanation
+            model: a string containing the language model to use as judge
 
         Returns:
             output_dictionary: a dictionary containing the similarity score, reason, and 
