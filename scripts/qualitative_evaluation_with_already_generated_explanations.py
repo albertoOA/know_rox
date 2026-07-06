@@ -23,9 +23,12 @@ if __name__ == "__main__":
     utils_object = utilsModule()
     test_utils_object = testUtilsModule()
 
-    model_to_run = 'gpt-oss:20b' # qwen3:14b  |  qwen3:8b  |  qwen3:1.7b  |  qwen3:32b  |  gpt-oss:20b  
+    model_used_to_generate_explanations = 'gpt-oss:20b' # qwen3:14b  |  qwen3:8b  |  qwen3:1.7b  |  qwen3:32b  |  gpt-oss:20b  
+    model_used_to_evaluate_explanations = 'qwen3.5:9b' # qwen3.5:9b  |  gemma4:12b / 26b  |  gpt-oss:20b
     specificity = 3
     dataset_name = 'collaborative_ssd_case_inspection'
+
+    test_utils_object.init_semantic_similarity_metric_with_llm_as_judge(model_used_to_evaluate_explanations)
 
     # Pre-trained encoder models
     bi_encoder_model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
@@ -33,7 +36,9 @@ if __name__ == "__main__":
     #cross_encoder_model = CrossEncoder("cross-encoder/distiluse-base-multilingual-cased-v1") # useful in multilingual comparisons
 
     evaluation_results_file = "qualitative_evaluation_results_article_example_with_specificity_" \
-        + str(specificity) + "_dataset_" + dataset_name + "_using_language_models_" + model_to_run + ".csv"
+        + str(specificity) + "_dataset_" + dataset_name + "_using_language_models_" \
+        + model_used_to_generate_explanations + "_for_generation_" \
+        + model_used_to_evaluate_explanations + "_for_evaluation" + ".csv"
 
 
     results_dict = {"Pair ID": list(), "Dataset" : list(), "Language model" : list(), "Specificity" : list(), \
@@ -85,7 +90,7 @@ if __name__ == "__main__":
     for i in range (0, number_of_explanations):    
         results_dict['Pair ID'].append(explanations_dict['ID'][i])
         results_dict['Dataset'].append(dataset_name)
-        results_dict['Language model'].append(model_to_run)
+        results_dict['Language model'].append(model_used_to_generate_explanations)
         results_dict['Specificity'].append(specificity)
         results_dict['Words'].append(len(explanations_dict['Explanation'][i].split()))
         ##results_dict['Readability score'].append(textstat.dale_chall_readability_score(result.output.narrative))
