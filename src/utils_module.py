@@ -144,7 +144,14 @@ class testUtilsModule:
         self.ollama_judge = OllamaModel(
             model=self.evaluation_model_to_run, 
             base_url="http://localhost:11434",
-            temperature=0.0
+            temperature=0.0, 
+            generation_kwargs={
+                "format": "json",          # forces Ollama to output valid JSON grammar from token 0
+                "num_predict": 2500,       # ensures that the 'reason' field of the metric contains a complete string (avoiding abrupt truncated responses)
+                "num_ctx": 32768,          # forces Ollama to allocate a wide context window 
+                "repeat_penalty": 1.15,    # halts repetitive word looping on long texts
+                "frequency_penalty": 0.05,
+            }
         ) # initialize the local Ollama judge model with 0 temperature for more deterministic grading behavior.
 
         # define a Custom Semantic Similarity Metric using G-Eval
@@ -159,7 +166,8 @@ class testUtilsModule:
                 "Ignore changes in tone, formatting, and minor stylistic embellishments that make the text sound more 'natural'.",
                 "Penalize heavily if semantic facts, core semantic relationship dynamics, or (numeric) data are missing or altered.",
                 "Determine if a human reading the actual output would walk away with the exact same understanding as reading the input narrative.",
-                "Rate the similarity on a scale from 0 (completely different meaning) to 1 (perfect semantic equivalence)."
+                "Write down a detailed reason explaining your findings.",
+                "Rate the similarity, based ON YOUR REASONING, on a scale from 0.0 (completely different meaning) to 1.0 (perfect semantic equivalence)."
             ],
             threshold=0.75  # Pass/Fail threshold for your pipeline tests
         )
@@ -191,7 +199,7 @@ class testUtilsModule:
         
         # Return structured results
         return {
-            "score": self.semantic_similarity_metric.score,
             "reason": self.semantic_similarity_metric.reason,
+            "score": self.semantic_similarity_metric.score,
             "passed": self.semantic_similarity_metric.is_successful()
         }
