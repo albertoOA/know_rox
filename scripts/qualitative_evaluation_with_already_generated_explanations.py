@@ -24,9 +24,11 @@ if __name__ == "__main__":
     test_utils_object = testUtilsModule()
 
     model_used_to_generate_explanations = 'gpt-oss:20b' # qwen3:14b  |  qwen3:8b  |  qwen3:1.7b  |  qwen3:32b  |  gpt-oss:20b  
-    model_used_to_evaluate_explanations = 'qwen3.5:9b' # qwen3.5:9b  |  gemma4:12b / 26b  |  gpt-oss:20b
+    model_used_to_evaluate_explanations = 'gpt-oss:20b' # qwen3.5:9b  |  gemma4:12b / 26b / 31b  |  gpt-oss:20b
     specificity = 3
     dataset_name = 'collaborative_ssd_case_inspection'
+
+    cross_encoder_model_for_natural_language_inferece_label_mapping = ["contradiction", "entailment", "neutral"]
 
     test_utils_object.init_semantic_similarity_metric_with_llm_as_judge(model_used_to_evaluate_explanations)
 
@@ -34,6 +36,7 @@ if __name__ == "__main__":
     bi_encoder_model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
     cross_encoder_model = CrossEncoder("cross-encoder/stsb-distilroberta-base") # great for Semantic Textual Similarity (only English)
     #cross_encoder_model = CrossEncoder("cross-encoder/distiluse-base-multilingual-cased-v1") # useful in multilingual comparisons
+    cross_encoder_model_for_natural_language_inferece = CrossEncoder("cross-encoder/nli-deberta-v3-base")
 
     evaluation_results_file = "qualitative_evaluation_results_article_example_with_specificity_" \
         + str(specificity) + "_dataset_" + dataset_name + "_using_language_models_" \
@@ -43,8 +46,8 @@ if __name__ == "__main__":
 
     results_dict = {"Pair ID": list(), "Dataset" : list(), "Language model" : list(), "Specificity" : list(), \
                      "Words": list(), "Readability score": list(), "Cosine similarity": list(), \
-                     "Bi-encoder similarity": list(), "Cross-encoder similarity": list(), "LLM-judge similarity": list(), \
-                     "LLM-judge similarity SD": list(), "LLM-judge similarity MAD": list()}
+                     "Bi-encoder similarity": list(), "Cross-encoder similarity": list(), "Cross-encoder inference": list(), \
+                     "LLM-judge similarity": list(), "LLM-judge similarity SD": list(), "LLM-judge similarity MAD": list()}
 
     explanations_dict = {"ID": list(), "Explanation" : list()}
 
@@ -103,9 +106,13 @@ if __name__ == "__main__":
             bi_encoder_model.encode(explanations_dict['Explanation'][i])).item()) # cosine-similarity by default (item is used to extract the value of the result, which is a tensor)
         results_dict['Cross-encoder similarity'].append(cross_encoder_model.predict([narrative, explanations_dict['Explanation'][i]]))
         
+        cross_encoder_inference_result_scores = cross_encoder_model_for_natural_language_inferece.predict([narrative, explanations_dict['Explanation'][i]])
+        cross_encoder_inference_result_label = cross_encoder_model_for_natural_language_inferece_label_mapping[np.argmax(cross_encoder_inference_result_scores)]
+        results_dict['Cross-encoder inference'].append(cross_encoder_inference_result_label)
+
         # the next metric is non-deterministic thus we evaluate its consistency
         llm_judge_score_list = list()
-        for j in range (0, 100):
+        for j in range (0, 3):
             llm_judge_score_list.append(test_utils_object.compute_semantic_similarity_with_llm_as_judge(\
                 narrative, explanations_dict['Explanation'][i])['score'])
         median = np.median(llm_judge_score_list)
@@ -135,6 +142,7 @@ if __name__ == "__main__":
     print(" Explanation cosine similary: ", results_dict["Cosine similarity"]) 
     print(" Explanation bi-encoder similary: ", results_dict["Bi-encoder similarity"]) 
     print(" Explanation cross-encoder similary: ", results_dict["Cross-encoder similarity"]) 
+    print(" Explanation cross-encoder inference: ", results_dict["Cross-encoder inference"])
     print(" Explanation llm-judge similarity: ", results_dict["LLM-judge similarity"]) 
     print(" Explanation llm-judge similarity SD: ", results_dict["LLM-judge similarity SD"]) 
     print(" Explanation llm-judge similarity MAD: ", results_dict["LLM-judge similarity MAD"]) 
